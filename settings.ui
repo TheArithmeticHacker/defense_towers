@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Settings</class>
+ <widget class="QWidget" name="Settings">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>779</width>
+    <height>740</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="sound_value">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>220</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="save">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>650</y>
+     <width>391</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Comic Sans MS</family>
+     <pointsize>-1</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> background-color: rgb(0,0,0);
+    border-style: solid;
+    color:  rgb(255, 255, 255);
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: rgb(255, 0, 0);
+    font: 48px;
+    padding: 6px;
+</string>
+   </property>
+   <property name="text">
+    <string>Back/Save</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="sound">
+   <property name="geometry">
+    <rect>
+     <x>368</x>
+     <y>220</y>
+     <width>226</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="baseSize">
+    <size>
+     <width>0</width>
+     <height>26</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="maximum">
+    <number>100</number>
+   </property>
+   <property name="singleStep">
+    <number>5</number>
+   </property>
+   <property name="pageStep">
+    <number>1</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="difficulty">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>130</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">  /* Reset */
+hover::after{
+color: #f39c12;
+}
+radius: 500px;
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  /* Personalize */
+  width: 20rem;
+  padding: 1rem 4rem 1rem 1rem;
+  background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+  color: black;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(255, 0, 0, 0.2);
+  cursor: pointer;</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Easy</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Medium</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Hard</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="Settings_2">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>0</y>
+     <width>201</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Comic Sans MS</family>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <property name="lineWidth">
+    <number>2</number>
+   </property>
+   <property name="midLineWidth">
+    <number>0</number>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#14080e;&quot;&gt;Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Difficult_labe">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>100</y>
+     <width>201</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Comic Sans MS</family>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <property name="lineWidth">
+    <number>2</number>
+   </property>
+   <property name="midLineWidth">
+    <number>0</number>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#14080e;&quot;&gt;Difficulty&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sound_label">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>200</y>
+     <width>271</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Comic Sans MS</family>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;Sound Volume&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

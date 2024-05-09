@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>802</width>
+    <height>619</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="settings">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>290</y>
+      <width>391</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> background-color: rgb(16, 57, 0);
+    border-style: solid;
+    color:  rgb(232, 237, 223);
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: rgb(16, 57, 0);
+    font: 48px;
+    padding: 6px;
+</string>
+    </property>
+    <property name="text">
+     <string>Settings</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Title">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>20</y>
+      <width>561</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Comic Sans MS</family>
+      <pointsize>-1</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">    border-style: solid;
+    color:  rgb(47, 102, 144);
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: rgb(16, 57, 0);
+    font: 48px;
+    padding: 6px;
+</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#14080e;&quot;&gt;Defense of Towers&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="startGame">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>200</y>
+      <width>391</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> background-color: rgb(16, 57, 0);
+    border-style: solid;
+    color:  rgb(232, 237, 223);
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: rgb(16, 57, 0);
+    font: 48px;
+    padding: 6px;
+</string>
+    </property>
+    <property name="text">
+     <string>Start Game</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>802</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
