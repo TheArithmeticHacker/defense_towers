@@ -14,7 +14,7 @@ class LevelWindow : public QWidget
 
 public:
     explicit LevelWindow(QWidget *parent = nullptr);
-    Game* game;
+     Game* game;
     ~LevelWindow();
 signals:
     void back();
