@@ -1,7 +1,7 @@
 #include "game.h"
 #include "castle.h"
 #include "fence.h"
-
+#include "timerwidget.h"
 
 Game::Game(QWidget *parent) : QGraphicsView(parent) {
     //Scene setting
@@ -12,7 +12,7 @@ Game::Game(QWidget *parent) : QGraphicsView(parent) {
     for(int i = 0; i < 13; i++)
         structures[i] = new Structure*[13];
 
-    //Map formation
+    //Map formatiom
     background = new Map();
     background->setPos(0, 50);
     scene->addItem(background);
@@ -21,6 +21,12 @@ Game::Game(QWidget *parent) : QGraphicsView(parent) {
     locations = new Locations();
     CloseButton* close_btn = new CloseButton(parent);
     scene->addItem(close_btn);
+
+
+    TimerWidget * time = new TimerWidget();
+    time->setPos(scene->sceneRect().topRight() - QPointF(time->boundingRect().width()+80, -20));
+    scene->addItem(time);
+    time->startTimer();
 
 
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);

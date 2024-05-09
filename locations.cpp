@@ -1,7 +1,7 @@
 #include "locations.h"
 #include <QDebug>
 Locations::Locations() {
-    file = new QFile("locations.txt");
+    file = new QFile("C:\\Users\\AUC\\Desktop\\qt practice\\defense_towers\\build\\Desktop_Qt_6_7_0_MinGW_64_bit-Debug\\locations.txt");
     if(!file->open(QIODevice::ReadOnly|QIODevice::Text)){
         qDebug() << "could not open file for read";
         return;

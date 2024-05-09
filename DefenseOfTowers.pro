@@ -20,7 +20,8 @@ SOURCES += \
     mainwindow.cpp \
     map.cpp \
     settings.cpp \
-    structure.cpp
+    structure.cpp \
+    timerwidget.cpp
 
 HEADERS += \
     castle.h \
@@ -33,7 +34,8 @@ HEADERS += \
     mainwindow.h \
     map.h \
     settings.h \
-    structure.h
+    structure.h \
+    timerwidget.h
 
 FORMS += \
     levelwindow.ui \
