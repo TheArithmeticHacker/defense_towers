@@ -47,9 +47,11 @@ Game::~Game()
 
 bool Game::isThere(QMouseEvent *e, int x, int y, int w, int h)
 {
+    /*
     if(e->x() >= x && e->x() < x + w && e->y() >= y && e->y() < y+h)
         return true;
     return false;
+    */
 }
 
 void Game::mousePressEvent(QMouseEvent* e)
@@ -64,7 +66,7 @@ void Game::build(){
             if(locations->coordinates[i][j] == 0){
                 structures[i][j] = nullptr;
             }else if(locations->coordinates[i][j] == 1){
-                structures[i][j] = new Castle();
+                structures[i][j] = new Castle(scene);
                 structures[i][j]->setPosition(j, i);
                 scene->addItem(structures[i][j]);
                 //scene->addItem(dynamic_cast<Castle*>(structures[i][j])->healthBar);
@@ -72,6 +74,7 @@ void Game::build(){
                 structures[i][j] = new Fence(scene);
                 structures[i][j]->setPosition(j, i);
                 scene->addItem(structures[i][j]);
+
             }else if(locations->coordinates[i][j] == 3){
                 //
             }else{

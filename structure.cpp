@@ -2,9 +2,6 @@
 
 Structure::Structure(): QObject(), QGraphicsPixmapItem() {
     health = 0;
-    x = 0;
-    y = 0;
-
 }
 
 void Structure::changeHealth(int x)
@@ -13,8 +10,10 @@ void Structure::changeHealth(int x)
     health += x;
 }
 
-void Structure::setPosition(int x, int y)
+void Structure::setPosition(int xPos, int yPos)
 {
+    x = xPos;
+    y = yPos;
     //Sets the position of the structure into an appropriate position according to 13x13 grid
     if(x > 12 || x < 0)
         return;
@@ -22,6 +21,7 @@ void Structure::setPosition(int x, int y)
         return;
     //The offsets is due to the upper bar containing health, close button, timer, and score.
     setPos(x*61+1, y*57 + 51);
+
 }
 
 bool Structure::isDamaged()
