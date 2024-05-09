@@ -6,6 +6,7 @@ Castle::Castle(QGraphicsScene* parent): Structure() {
     this->parent = parent;
     setPixmap(QPixmap(":/img/Resources/Castle.png").scaled(50, 50));
     maxHealth = 20;
+    type = 1;
     health = maxHealth;
     healthBar = new HealthBar(this, 400, 50, 0, 0, 3);
     costOfWalk = 20;

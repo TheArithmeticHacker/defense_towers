@@ -17,5 +17,6 @@ LevelWindow::LevelWindow(QWidget *parent)
 
 LevelWindow::~LevelWindow()
 {
+    delete game;
     delete ui;
 }

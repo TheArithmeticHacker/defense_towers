@@ -10,6 +10,7 @@ class Fence : public Structure
 {
 public:
     Fence(QGraphicsScene*);
+    ~Fence();
     HealthBar* healthBar;
     void changeHealth(int);
 public slots:

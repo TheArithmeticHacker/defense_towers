@@ -4,10 +4,17 @@
 Fence::Fence(QGraphicsScene* scene): Structure() {
     setPixmap(QPixmap(":/img/Resources/Fence.png").scaled(61, 58));
     parent = scene;
+    type = 2;
     maxHealth = 20;
     health = maxHealth;
     costOfWalk = (health/maxHealth) * 100;
     healthBar = nullptr;
+
+}
+
+Fence::~Fence()
+{
+    qDebug("Fence deleted");
 
 }
 
@@ -36,8 +43,8 @@ void Fence::changeHealth(int healthChange){
         //Destruc object and emit game over
         delete healthBar;
         qDebug("Zero");
-        healthBar = nullptr;
-        delete this;
+        parent->removeItem(this);
+        type = 0;
     }else{
         qDebug("Something");
         health += healthChange;

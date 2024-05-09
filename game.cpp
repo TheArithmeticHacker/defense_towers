@@ -33,16 +33,16 @@ Game::Game(QWidget *parent) : QGraphicsView(parent) {
 
 Game::~Game()
 {
-    /*
+
     for(int i = 0; i < 13; i++){
         for(int j = 0; j < 13; j++){
-            if(locations->coordinates[i][j] != 0 && structures[i][j] == nullptr)
-                locations->coordinates[i][j] = 0;
+            if(locations->coordinates[i][j] == 2 && structures[i][j]->type==0)
+                locations->coordinates[i][j] = structures[i][j]->type;
         }
     }
 
     locations->writeData();
-    */
+
 }
 
 bool Game::isThere(QMouseEvent *e, int x, int y, int w, int h)
