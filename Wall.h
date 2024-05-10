@@ -1,20 +1,19 @@
-#ifndef FENCE_H
-#define FENCE_H
+#ifndef WALL_H
+#define WALL_H
 #include "structure.h"
 #include <QGraphicsScene>
 #include "healthbar.h"
 #include <QGraphicsSceneMouseEvent>
 
-
-class Fence : public Structure
+class Wall : public Structure
 {
 public:
-    Fence(QGraphicsScene*);
-    ~Fence();
+    Wall(QGraphicsScene *);
+    ~Wall();
     HealthBar* healthBar;
     void changeHealth(int);
 public slots:
     void mousePressEvent(QGraphicsSceneMouseEvent*);
 };
 
-#endif // FENCE_H
+#endif // WALL_H

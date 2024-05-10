@@ -10,7 +10,7 @@ class Castle: public Structure
 public:
     Castle(QGraphicsScene*, Game*);
     HealthBar * healthBar;
-    void changeHealth(int);
+    void changeHealth(double);
     Game* parentGame;
     QGraphicsScene* parentScene;
 

@@ -1,24 +1,21 @@
-#include "fence.h"
+#include "Wall.h"
 #include <QDebug>
 #include <iostream>
-Fence::Fence(QGraphicsScene* scene): Structure() {
+Wall::Wall(QGraphicsScene *scene)
+    : Structure()
+{
     setPixmap(QPixmap(":/img/Resources/Fence.png").scaled(61, 58));
     parent = scene;
-    type = 2;
-    maxHealth = 20;
-    health = maxHealth;
-    costOfWalk = (health/maxHealth) * 100;
+    setType(2);
+    setMaxHealth(20);
+    setHealth(getMaxHealth());
+    setCost((getHealth() / getMaxHealth()) * 100);
     healthBar = nullptr;
-
 }
 
-Fence::~Fence()
-{
+Wall::~Wall() {}
 
-
-}
-
-void Fence::mousePressEvent(QGraphicsSceneMouseEvent * e)
+void Wall::mousePressEvent(QGraphicsSceneMouseEvent *e)
 {
     if(e->button() == Qt::LeftButton){
         changeHealth(-2);
@@ -29,26 +26,26 @@ void Fence::mousePressEvent(QGraphicsSceneMouseEvent * e)
     }
 }
 
-void Fence::changeHealth(int healthChange){
+void Wall::changeHealth(int healthChange)
+{
     if(healthBar == nullptr){
-        healthBar = new HealthBar(this, 50, 10, x*61+5, y*57 + 55,  1);
+        healthBar = new HealthBar(this, 50, 10, getX() * 61 + 5, getY() * 57 + 55, 1);
     }
 
-    if(health + healthChange >= maxHealth){
-        health = maxHealth;
+    if (getHealth() + healthChange >= getMaxHealth()) {
+        setHealth(getMaxHealth());
         qDebug("Max");
         delete healthBar;
         healthBar = nullptr;
-    }else if(health + healthChange <= 0){
+    } else if (getHealth() + healthChange <= 0) {
         //Destruc object and emit game over
         delete healthBar;
         qDebug("Zero");
         parent->removeItem(this);
-        type = 0;
-    }else{
+        setType(0);
+    } else {
         qDebug("Something");
-        health += healthChange;
+        setHealth(getHealth() + healthChange);
         healthBar->updateBar();
     }
 }
-

@@ -31,6 +31,9 @@ HealthBar::~HealthBar()
 }
 
 void HealthBar::updateBar(){
-    redBar->setRect(xPosition+borderStroke, yPosition+borderStroke, parent->health/parent->maxHealth * (width-2*borderStroke), height-2*borderStroke);
+    redBar->setRect(xPosition + borderStroke,
+                    yPosition + borderStroke,
+                    parent->getHealth() / parent->getMaxHealth() * (width - 2 * borderStroke),
+                    height - 2 * borderStroke);
     qDebug("HealthBar Updated");
 }

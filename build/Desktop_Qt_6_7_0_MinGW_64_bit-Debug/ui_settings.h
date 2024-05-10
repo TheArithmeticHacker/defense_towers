@@ -109,7 +109,7 @@ public:
         Difficult_labe->setMidLineWidth(0);
         sound_label = new QLabel(Settings);
         sound_label->setObjectName("sound_label");
-        sound_label->setGeometry(QRect(60, 200, 271, 71));
+        sound_label->setGeometry(QRect(30, 200, 271, 71));
         QFont font2;
         font2.setFamilies({QString::fromUtf8("Comic Sans MS")});
         sound_label->setFont(font2);

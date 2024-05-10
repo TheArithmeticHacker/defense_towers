@@ -16,7 +16,7 @@ Tower::Tower( QGraphicsScene * scene):Structure() {
     this->parent = scene; // this is where the problem is
     setPixmap(QPixmap(":/img/Clan_Castle.png"));
     setAcceptHoverEvents(true);
-    type=3;
+    setType(3);
 }
 double Tower:: distanceTo(QGraphicsItem * item){
     QLineF ln(pos(),item->pos());
@@ -35,9 +35,9 @@ void Tower::fire(const QPointF &attackDest) {
     }
 
     TowerBullet *bullet = new TowerBullet();
-    bullet->setPos(x + 40, y + 48);
+    bullet->setPos(getX() + 40, getY() + 48);
 
-    QLineF ln(QPointF(x + 40, y + 48), mapToScene(attackDest));
+    QLineF ln(QPointF(getX() + 40, getY() + 48), mapToScene(attackDest));
     double angle = -ln.angle();
     bullet->setRotation(angle);
     parent->addItem(bullet);

@@ -9,11 +9,11 @@ Castle::Castle(QGraphicsScene* Scene, Game* game): Structure() {
     //We use the game pointer in order to access the signals of LevelWindow through Game Object
     parentGame = game;
     setPixmap(QPixmap(":/img/Resources/Castle.png").scaled(50, 50));
-    maxHealth = 20;
-    type = 1;
-    health = maxHealth;
+    setMaxHealth(20);
+    setType(1);
+    setHealth(getMaxHealth());
     healthBar = new HealthBar(this, 400, 50, 0, 0, 3);
-    costOfWalk = 20;
+    setCost(0);
 }
 
 void Castle::mousePressEvent(QGraphicsSceneMouseEvent * e)
@@ -26,18 +26,19 @@ void Castle::mousePressEvent(QGraphicsSceneMouseEvent * e)
 }
 
 //Function that handles the healthBar of the Castle
-void Castle::changeHealth(int x){
-    if(health + x > maxHealth){
-        health = maxHealth;
-    }else if(health + x <= 0){
+void Castle::changeHealth(double x)
+{
+    if (getHealth() + x > getMaxHealth()) {
+        setHealth(getMaxHealth());
+    } else if (getHealth() + x <= 0) {
         //Placeholder code for now
-        health = 0;
+        setHealth(0);
         healthBar->updateBar();
         //Code that trigers lose condition of the game
         emit dynamic_cast<LevelWindow*>(parentGame->parentWidget)->loseScreen();
         delete parentGame->parentWidget;
-    }else{
-        health += x;
+    } else {
+        setHealth(getHealth() + x);
         healthBar->updateBar();
     }
 }
