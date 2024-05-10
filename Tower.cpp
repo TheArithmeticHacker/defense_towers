@@ -13,10 +13,14 @@
 #include <QGraphicsScene>
 #include "levelwindow.h"
 Tower::Tower( QGraphicsScene * scene):Structure() {
-    this->parent = scene; // this is where the problem is
-    setPixmap(QPixmap(":/img/Clan_Castle.png"));
+    parent = scene;
+    setPixmap(QPixmap(":/img/Clan_Castle.png").scaled(50, 50));
     setAcceptHoverEvents(true);
     type=3;
+    healthBar = nullptr;
+    maxHealth = 20;
+    health = maxHealth;
+    costOfWalk = 50;
 }
 double Tower:: distanceTo(QGraphicsItem * item){
     QLineF ln(pos(),item->pos());
@@ -24,12 +28,17 @@ double Tower:: distanceTo(QGraphicsItem * item){
 }
 
 void Tower::mousePressEvent(QGraphicsSceneMouseEvent *event) {
-    qDebug() << "Tower clicked";
-    fire(event->pos());
+    if(event->button() == Qt::LeftButton){
+        changeHealth(-2);
+
+    }else if(event->button() == Qt::RightButton){
+        changeHealth(1);
+
+    }
 }
 
 void Tower::fire(const QPointF &attackDest) {
-    if (parent) {
+    if (parent == nullptr) {
         qDebug() << "Error: game or game->scene is null";
         return;
     }
@@ -41,5 +50,28 @@ void Tower::fire(const QPointF &attackDest) {
     double angle = -ln.angle();
     bullet->setRotation(angle);
     parent->addItem(bullet);
+}
+
+void Tower::changeHealth(int healthChange){
+    if(healthBar == nullptr){
+        healthBar = new HealthBar(this, 50, 10, x*61+5, y*57 + 55,  1);
+    }
+
+    if(health + healthChange >= maxHealth){
+        health = maxHealth;
+        qDebug("Max");
+        delete healthBar;
+        healthBar = nullptr;
+    }else if(health + healthChange <= 0){
+        //Destruc object and emit game over
+        delete healthBar;
+        qDebug("Zero");
+        parent->removeItem(this);
+        type = 0;
+    }else{
+        qDebug("Something");
+        health += healthChange;
+        healthBar->updateBar();
+    }
 }
 

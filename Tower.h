@@ -7,6 +7,7 @@
 #include <QObject>
 #include <QGraphicsScene>
 #include "structure.h"
+#include "healthbar.h"
 
 class Tower : public Structure{
     Q_OBJECT
@@ -15,6 +16,8 @@ public:
     double distanceTo(QGraphicsItem * item);
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
     void fire(const QPointF &attackDest);
+    HealthBar* healthBar;
+    void changeHealth(int);
 private:
     QGraphicsPolygonItem * attack_area;
     QPointF attack_dest;

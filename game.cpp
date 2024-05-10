@@ -23,17 +23,18 @@ Game::Game(QWidget *parent) : QGraphicsView(parent) {
     CloseButton* close_btn = new CloseButton(parentWidget);
     scene->addItem(close_btn);
 
-
+    //Timer of the game
     TimerWidget * time = new TimerWidget(this);
     time->setPos(scene->sceneRect().topRight() - QPointF(time->boundingRect().width()+80, -20));
     scene->addItem(time);
     time->startTimer();
 
+/*
     Tower *t = new Tower(scene);
     t->setPos(122,200);
 
     scene->addItem(t);
-
+*/
 
 
 
@@ -83,7 +84,9 @@ void Game::build(){
                 scene->addItem(structures[i][j]);
 
             }else if(locations->coordinates[i][j] == 3){
-                //
+                structures[i][j] = new Tower(scene);
+                structures[i][j]->setPosition(j, i);
+                scene->addItem(structures[i][j]);
             }else{
                 //   qDebug("Not Working");
             }
@@ -97,7 +100,7 @@ void Game::update()
 {
     for(int i = 0; i < 13; i++){
         for(int j = 0; j < 13; j++){
-            if(locations->coordinates[i][j] == 2 && structures[i][j]->type==0)
+            if(locations->coordinates[i][j] != 0 && structures[i][j]->type==0)
                 locations->coordinates[i][j] = structures[i][j]->type;
         }
     }
