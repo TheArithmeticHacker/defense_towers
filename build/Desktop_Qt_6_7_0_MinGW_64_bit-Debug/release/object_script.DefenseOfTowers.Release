@@ -1,3 +1,5 @@
+release/Tower.o
+release/TowerBullet.o
 release/castle.o
 release/closebutton.o
 release/fence.o
@@ -15,6 +17,8 @@ release/structure.o
 release/timerwidget.o
 release/winscreen.o
 release/qrc_res.o
+release/moc_Tower.o
+release/moc_TowerBullet.o
 release/moc_gameover.o
 release/moc_levelwindow.o
 release/moc_mainwindow.o

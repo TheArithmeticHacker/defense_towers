@@ -1,3 +1,5 @@
+debug/Tower.o
+debug/TowerBullet.o
 debug/castle.o
 debug/closebutton.o
 debug/fence.o
@@ -15,6 +17,8 @@ debug/structure.o
 debug/timerwidget.o
 debug/winscreen.o
 debug/qrc_res.o
+debug/moc_Tower.o
+debug/moc_TowerBullet.o
 debug/moc_gameover.o
 debug/moc_levelwindow.o
 debug/moc_mainwindow.o

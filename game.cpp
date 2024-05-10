@@ -2,7 +2,7 @@
 #include "castle.h"
 #include "fence.h"
 #include "timerwidget.h"
-
+#include <Tower.h>
 Game::Game(QWidget *parent) : QGraphicsView(parent) {
     parentWidget = parent;
     //Scene setting
@@ -28,6 +28,13 @@ Game::Game(QWidget *parent) : QGraphicsView(parent) {
     time->setPos(scene->sceneRect().topRight() - QPointF(time->boundingRect().width()+80, -20));
     scene->addItem(time);
     time->startTimer();
+
+    Tower *t = new Tower(scene);
+    t->setPos(122,200);
+
+    scene->addItem(t);
+
+
 
 
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);

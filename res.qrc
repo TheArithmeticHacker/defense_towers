@@ -4,5 +4,7 @@
         <file>Resources/Castle.png</file>
         <file>Resources/Fence.png</file>
         <file>Resources/X.png</file>
+        <file>Clan_Castle.png</file>
+        <file>Bomb3.png</file>
     </qresource>
 </RCC>
