@@ -18,6 +18,8 @@ public:
     ~LevelWindow();
 signals:
     void back();
+    void winScreen();
+    void loseScreen();
 private:
     Ui::LevelWindow *ui;
 };

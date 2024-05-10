@@ -2,6 +2,8 @@ debug/castle.o
 debug/closebutton.o
 debug/fence.o
 debug/game.o
+debug/gameover.o
+debug/gamesettings.o
 debug/healthbar.o
 debug/levelwindow.o
 debug/locations.o
@@ -10,7 +12,12 @@ debug/mainwindow.o
 debug/map.o
 debug/settings.o
 debug/structure.o
+debug/timerwidget.o
+debug/winscreen.o
 debug/qrc_res.o
+debug/moc_gameover.o
 debug/moc_levelwindow.o
 debug/moc_mainwindow.o
 debug/moc_settings.o
+debug/moc_timerwidget.o
+debug/moc_winscreen.o

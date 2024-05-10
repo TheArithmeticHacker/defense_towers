@@ -2,6 +2,8 @@ release/castle.o
 release/closebutton.o
 release/fence.o
 release/game.o
+release/gameover.o
+release/gamesettings.o
 release/healthbar.o
 release/levelwindow.o
 release/locations.o
@@ -10,7 +12,12 @@ release/mainwindow.o
 release/map.o
 release/settings.o
 release/structure.o
+release/timerwidget.o
+release/winscreen.o
 release/qrc_res.o
+release/moc_gameover.o
 release/moc_levelwindow.o
 release/moc_mainwindow.o
 release/moc_settings.o
+release/moc_timerwidget.o
+release/moc_winscreen.o

@@ -3,13 +3,16 @@
 #include "structure.h"
 #include "healthbar.h"
 #include <QGraphicsSceneMouseEvent>
+#include "game.h"
 
 class Castle: public Structure
 {
 public:
-    Castle(QGraphicsScene*);
+    Castle(QGraphicsScene*, Game*);
     HealthBar * healthBar;
     void changeHealth(int);
+    Game* parentGame;
+    QGraphicsScene* parentScene;
 
 public slots:
     void mousePressEvent(QGraphicsSceneMouseEvent*);

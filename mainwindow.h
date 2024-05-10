@@ -20,6 +20,10 @@ public:
 private slots:
     void reset();
 
+    void lose();
+
+    void win();
+
     void on_startGame_clicked();
 
     void on_settings_clicked();

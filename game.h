@@ -20,7 +20,7 @@ public:
 
     QGraphicsScene * scene;
 
-    //CloseButton * close_btn;
+
 
     Map * background;
 
@@ -28,9 +28,13 @@ public:
 
     Locations* locations;
 
+    QWidget* parentWidget;
+
     bool isThere(QMouseEvent* e, int x, int y, int w, int h);
 
     void build();
+
+    void update();
 signals:
     void back();
 public slots:

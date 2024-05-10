@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GameOver</class>
+ <widget class="QWidget" name="GameOver">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>786</width>
+    <height>589</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="Title">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>50</y>
+     <width>561</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Comic Sans MS</family>
+     <pointsize>-1</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">    border-style: solid;
+    color:  rgb(47, 102, 144);
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: rgb(16, 57, 0);
+    font: 48px;
+    padding: 6px;
+</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#14080e;&quot;&gt;GAME OVER&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="MainMenu">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>250</y>
+     <width>291</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> background-color: rgb(16, 57, 0);
+    border-style: solid;
+    color:  rgb(232, 237, 223);
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: rgb(16, 57, 0);
+    font: 48px;
+    padding: 6px;
+</string>
+   </property>
+   <property name="text">
+    <string>Main Menu</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="tryAgain">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>250</y>
+     <width>311</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> background-color: rgb(16, 57, 0);
+    border-style: solid;
+    color:  rgb(232, 237, 223);
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: rgb(16, 57, 0);
+    font: 48px;
+    padding: 6px;
+</string>
+   </property>
+   <property name="text">
+    <string>Try Again</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

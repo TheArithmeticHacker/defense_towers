@@ -1,9 +1,10 @@
 #include "game.h"
 #include "castle.h"
 #include "fence.h"
-
+#include "timerwidget.h"
 
 Game::Game(QWidget *parent) : QGraphicsView(parent) {
+    parentWidget = parent;
     //Scene setting
     scene = new QGraphicsScene(this);
     setScene(scene);
@@ -12,15 +13,21 @@ Game::Game(QWidget *parent) : QGraphicsView(parent) {
     for(int i = 0; i < 13; i++)
         structures[i] = new Structure*[13];
 
-    //Map formation
+    //Map formatiom
     background = new Map();
     background->setPos(0, 50);
     scene->addItem(background);
 
     //Read data from files to know locations of structures
     locations = new Locations();
-    CloseButton* close_btn = new CloseButton(parent);
+    CloseButton* close_btn = new CloseButton(parentWidget);
     scene->addItem(close_btn);
+
+
+    TimerWidget * time = new TimerWidget(this);
+    time->setPos(scene->sceneRect().topRight() - QPointF(time->boundingRect().width()+80, -20));
+    scene->addItem(time);
+    time->startTimer();
 
 
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -34,14 +41,7 @@ Game::Game(QWidget *parent) : QGraphicsView(parent) {
 Game::~Game()
 {
 
-    for(int i = 0; i < 13; i++){
-        for(int j = 0; j < 13; j++){
-            if(locations->coordinates[i][j] == 2 && structures[i][j]->type==0)
-                locations->coordinates[i][j] = structures[i][j]->type;
-        }
-    }
 
-    locations->writeData();
 
 }
 
@@ -60,16 +60,16 @@ void Game::mousePressEvent(QMouseEvent* e)
 }
 
 void Game::build(){
-
     for(int i = 0; i < 13; i++){
         for(int j = 0; j < 13; j++){
             if(locations->coordinates[i][j] == 0){
                 structures[i][j] = nullptr;
             }else if(locations->coordinates[i][j] == 1){
-                structures[i][j] = new Castle(scene);
+
+                structures[i][j] = new Castle(scene, this);
                 structures[i][j]->setPosition(j, i);
                 scene->addItem(structures[i][j]);
-                //scene->addItem(dynamic_cast<Castle*>(structures[i][j])->healthBar);
+                qDebug("Test");
             }else if(locations->coordinates[i][j] == 2){
                 structures[i][j] = new Fence(scene);
                 structures[i][j]->setPosition(j, i);
@@ -82,5 +82,18 @@ void Game::build(){
             }
         }
     }
+    qDebug("Test");
 
+}
+
+void Game::update()
+{
+    for(int i = 0; i < 13; i++){
+        for(int j = 0; j < 13; j++){
+            if(locations->coordinates[i][j] == 2 && structures[i][j]->type==0)
+                locations->coordinates[i][j] = structures[i][j]->type;
+        }
+    }
+
+    locations->writeData();
 }

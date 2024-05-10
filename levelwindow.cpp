@@ -1,5 +1,6 @@
 #include "levelwindow.h"
 #include "ui_levelwindow.h"
+#include "gameover.h"
 
 
 
@@ -17,6 +18,7 @@ LevelWindow::LevelWindow(QWidget *parent)
 
 LevelWindow::~LevelWindow()
 {
+
     delete game;
     delete ui;
 }

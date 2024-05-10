@@ -13,6 +13,8 @@ SOURCES += \
     closebutton.cpp \
     fence.cpp \
     game.cpp \
+    gameover.cpp \
+    gamesettings.cpp \
     healthbar.cpp \
     levelwindow.cpp \
     locations.cpp \
@@ -20,25 +22,33 @@ SOURCES += \
     mainwindow.cpp \
     map.cpp \
     settings.cpp \
-    structure.cpp
+    structure.cpp \
+    timerwidget.cpp \
+    winscreen.cpp
 
 HEADERS += \
     castle.h \
     closebutton.h \
     fence.h \
     game.h \
+    gameover.h \
+    gamesettings.h \
     healthbar.h \
     levelwindow.h \
     locations.h \
     mainwindow.h \
     map.h \
     settings.h \
-    structure.h
+    structure.h \
+    timerwidget.h \
+    winscreen.h
 
 FORMS += \
+    gameover.ui \
     levelwindow.ui \
     mainwindow.ui \
-    settings.ui
+    settings.ui \
+    winscreen.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

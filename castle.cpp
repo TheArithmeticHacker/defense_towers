@@ -1,9 +1,13 @@
 #include "castle.h"
 #include <QDebug>
+#include "levelwindow.h"
 
 
-Castle::Castle(QGraphicsScene* parent): Structure() {
-    this->parent = parent;
+Castle::Castle(QGraphicsScene* Scene, Game* game): Structure() {
+    //Parent Scene is necessary so that HealthBar can be implemented
+    parent = game->scene;
+    //We use the game pointer in order to access the signals of LevelWindow through Game Object
+    parentGame = game;
     setPixmap(QPixmap(":/img/Resources/Castle.png").scaled(50, 50));
     maxHealth = 20;
     type = 1;
@@ -21,6 +25,7 @@ void Castle::mousePressEvent(QGraphicsSceneMouseEvent * e)
     }
 }
 
+//Function that handles the healthBar of the Castle
 void Castle::changeHealth(int x){
     if(health + x > maxHealth){
         health = maxHealth;
@@ -28,7 +33,9 @@ void Castle::changeHealth(int x){
         //Placeholder code for now
         health = 0;
         healthBar->updateBar();
-        qDebug("Health Over");
+        //Code that trigers lose condition of the game
+        emit dynamic_cast<LevelWindow*>(parentGame->parentWidget)->loseScreen();
+        delete parentGame->parentWidget;
     }else{
         health += x;
         healthBar->updateBar();

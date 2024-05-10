@@ -14,7 +14,7 @@ Fence::Fence(QGraphicsScene* scene): Structure() {
 
 Fence::~Fence()
 {
-    qDebug("Fence deleted");
+
 
 }
 
