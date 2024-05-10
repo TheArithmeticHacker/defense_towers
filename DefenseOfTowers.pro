@@ -11,12 +11,15 @@ CONFIG += c++17
 SOURCES += \
     Tower.cpp \
     TowerBullet.cpp \
+    Wall.cpp \
     castle.cpp \
+    cell.cpp \
     closebutton.cpp \
-    fence.cpp \
+    enemy.cpp \
     game.cpp \
     gameover.cpp \
     gamesettings.cpp \
+    graph.cpp \
     healthbar.cpp \
     levelwindow.cpp \
     locations.cpp \
@@ -26,17 +29,21 @@ SOURCES += \
     settings.cpp \
     structure.cpp \
     timerwidget.cpp \
-    winscreen.cpp
+    winscreen.cpp \
+    worker.cpp
 
 HEADERS += \
     Tower.h \
     TowerBullet.h \
+    Wall.h \
     castle.h \
+    cell.h \
     closebutton.h \
-    fence.h \
+    enemy.h \
     game.h \
     gameover.h \
     gamesettings.h \
+    graph.h \
     healthbar.h \
     levelwindow.h \
     locations.h \
@@ -45,7 +52,8 @@ HEADERS += \
     settings.h \
     structure.h \
     timerwidget.h \
-    winscreen.h
+    winscreen.h \
+    worker.h
 
 FORMS += \
     gameover.ui \

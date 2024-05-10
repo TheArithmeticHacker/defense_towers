@@ -16,7 +16,5 @@ void TowerBullet::move(){
 
     double dy = stepsize * qSin(qDegreesToRadians(theta));
     double dx = stepsize * qCos(qDegreesToRadians(theta));
-    setPos(x()+dx, y()+dy);
-
-
+    setPos(pos().x()+dx, pos().y()+dy);
 }

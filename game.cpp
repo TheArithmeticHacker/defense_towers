@@ -1,8 +1,11 @@
 #include "game.h"
+#include "Wall.h"
 #include "castle.h"
-#include "fence.h"
 #include "timerwidget.h"
+
 #include "Tower.h"
+#include "enemy.h"
+
 Game::Game(QWidget *parent) : QGraphicsView(parent) {
     parentWidget = parent;
     //Scene setting
@@ -32,12 +35,15 @@ Game::Game(QWidget *parent) : QGraphicsView(parent) {
 
 
 
+
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setFixedSize(800, 800);
     locations->readData();
 
     build();
+    Enemy *enemy1 = new Enemy(100, 100);
+    scene->addItem(enemy1);
 }
 
 Game::~Game()
@@ -49,11 +55,10 @@ Game::~Game()
 
 bool Game::isThere(QMouseEvent *e, int x, int y, int w, int h)
 {
-    /*
     if(e->x() >= x && e->x() < x + w && e->y() >= y && e->y() < y+h)
         return true;
     return false;
-    */
+    return true;
 }
 
 void Game::mousePressEvent(QMouseEvent* e)
@@ -73,7 +78,7 @@ void Game::build(){
                 scene->addItem(structures[i][j]);
                 qDebug("Test");
             }else if(locations->coordinates[i][j] == 2){
-                structures[i][j] = new Fence(scene);
+                structures[i][j] = new Wall(scene);
                 structures[i][j]->setPosition(j, i);
                 scene->addItem(structures[i][j]);
 
@@ -94,8 +99,8 @@ void Game::update()
 {
     for(int i = 0; i < 13; i++){
         for(int j = 0; j < 13; j++){
-            if(locations->coordinates[i][j] != 0 && structures[i][j]->type==0)
-                locations->coordinates[i][j] = structures[i][j]->type;
+            if(locations->coordinates[i][j] != 0 && structures[i][j]->getType()==0)
+                locations->coordinates[i][j] = structures[i][j]->getType();
         }
     }
 

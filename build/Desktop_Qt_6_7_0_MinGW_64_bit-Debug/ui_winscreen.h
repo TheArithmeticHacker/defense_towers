@@ -32,7 +32,7 @@ public:
         WinScreen->setBaseSize(QSize(0, 0));
         Title = new QLabel(WinScreen);
         Title->setObjectName("Title");
-        Title->setGeometry(QRect(70, 0, 561, 121));
+        Title->setGeometry(QRect(100, 30, 561, 121));
         QFont font;
         font.setFamilies({QString::fromUtf8("Comic Sans MS")});
         font.setBold(false);
