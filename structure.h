@@ -12,7 +12,8 @@ public:
     Structure();
 
     //position of the structure
-    int x, y;
+    int xx;
+    int yy;
 
     //Type
     int type;

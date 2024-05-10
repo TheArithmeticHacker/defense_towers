@@ -7,13 +7,14 @@
 #include <QTimer>
 #include <QLineF>
 #include <QGraphicsRectItem>
-#include"Game.h"
 #include <QGraphicsSceneMouseEvent>
 #include <QDebug>
 #include <QGraphicsScene>
 #include "levelwindow.h"
-Tower::Tower( QGraphicsScene * scene):Structure() {
-    parent = scene;
+
+Tower::Tower(QGraphicsScene* Scene, Game* game):Structure() {
+    parent = game->scene;
+    parentGame = game;
     setPixmap(QPixmap(":/img/Clan_Castle.png").scaled(50, 50));
     setAcceptHoverEvents(true);
     type=3;
@@ -29,24 +30,23 @@ double Tower:: distanceTo(QGraphicsItem * item){
 
 void Tower::mousePressEvent(QGraphicsSceneMouseEvent *event) {
     if(event->button() == Qt::LeftButton){
-        changeHealth(-2);
+        fire(event->pos());
 
     }else if(event->button() == Qt::RightButton){
-        changeHealth(1);
-
+        changeHealth(-1);
     }
 }
 
 void Tower::fire(const QPointF &attackDest) {
-    if (parent == nullptr) {
+    if (!parent || !parentGame) {
         qDebug() << "Error: game or game->scene is null";
         return;
     }
 
-    TowerBullet *bullet = new TowerBullet();
-    bullet->setPos(x + 40, y + 48);
+    TowerBullet *bullet = new TowerBullet(this);
+    bullet->setPos(x() + 20, y() + 30);
 
-    QLineF ln(QPointF(x + 40, y + 48), mapToScene(attackDest));
+    QLineF ln(QPointF(x() + 20, y() + 30), mapToScene(attackDest));
     double angle = -ln.angle();
     bullet->setRotation(angle);
     parent->addItem(bullet);
@@ -54,7 +54,7 @@ void Tower::fire(const QPointF &attackDest) {
 
 void Tower::changeHealth(int healthChange){
     if(healthBar == nullptr){
-        healthBar = new HealthBar(this, 50, 10, x*61+5, y*57 + 55,  1);
+        healthBar = new HealthBar(this, 50, 10,  xx*61+10, yy*57 + 55,  1);
     }
 
     if(health + healthChange >= maxHealth){

@@ -31,7 +31,8 @@ void Fence::mousePressEvent(QGraphicsSceneMouseEvent * e)
 
 void Fence::changeHealth(int healthChange){
     if(healthBar == nullptr){
-        healthBar = new HealthBar(this, 50, 10, x*61+5, y*57 + 55,  1);
+        qDebug("Working");
+        healthBar = new HealthBar(this, 50, 10, xx*61+10, yy*57 + 55,  1);
     }
 
     if(health + healthChange >= maxHealth){

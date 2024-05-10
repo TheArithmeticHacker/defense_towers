@@ -2,7 +2,7 @@
 #include "castle.h"
 #include "fence.h"
 #include "timerwidget.h"
-#include <Tower.h>
+#include "Tower.h"
 Game::Game(QWidget *parent) : QGraphicsView(parent) {
     parentWidget = parent;
     //Scene setting
@@ -29,12 +29,6 @@ Game::Game(QWidget *parent) : QGraphicsView(parent) {
     scene->addItem(time);
     time->startTimer();
 
-/*
-    Tower *t = new Tower(scene);
-    t->setPos(122,200);
-
-    scene->addItem(t);
-*/
 
 
 
@@ -84,7 +78,7 @@ void Game::build(){
                 scene->addItem(structures[i][j]);
 
             }else if(locations->coordinates[i][j] == 3){
-                structures[i][j] = new Tower(scene);
+                structures[i][j] = new Tower(scene, this);
                 structures[i][j]->setPosition(j, i);
                 scene->addItem(structures[i][j]);
             }else{

@@ -67,7 +67,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSTowerBulletENDCLASS[] = {
 };
 
 Q_CONSTINIT const QMetaObject TowerBullet::staticMetaObject = { {
-    QMetaObject::SuperData::link<QObject::staticMetaObject>(),
+    QMetaObject::SuperData::link<Structure::staticMetaObject>(),
     qt_meta_stringdata_CLASSTowerBulletENDCLASS.offsetsAndSizes,
     qt_meta_data_CLASSTowerBulletENDCLASS,
     qt_static_metacall,
@@ -104,14 +104,12 @@ void *TowerBullet::qt_metacast(const char *_clname)
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_CLASSTowerBulletENDCLASS.stringdata0))
         return static_cast<void*>(this);
-    if (!strcmp(_clname, "QGraphicsPixmapItem"))
-        return static_cast< QGraphicsPixmapItem*>(this);
-    return QObject::qt_metacast(_clname);
+    return Structure::qt_metacast(_clname);
 }
 
 int TowerBullet::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
-    _id = QObject::qt_metacall(_c, _id, _a);
+    _id = Structure::qt_metacall(_c, _id, _a);
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
