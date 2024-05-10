@@ -7,14 +7,17 @@
 #include <QObject>
 #include <QGraphicsScene>
 #include "structure.h"
+#include "game.h"
 
 class Tower : public Structure{
     Q_OBJECT
 public:
-    Tower(QGraphicsScene * parent);
+    Tower(QGraphicsScene*, Game*);
     double distanceTo(QGraphicsItem * item);
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
     void fire(const QPointF &attackDest);
+    Game* parentGame;
+    QGraphicsScene* parentScene;
 private:
     QGraphicsPolygonItem * attack_area;
     QPointF attack_dest;

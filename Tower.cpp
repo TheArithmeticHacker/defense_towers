@@ -7,13 +7,13 @@
 #include <QTimer>
 #include <QLineF>
 #include <QGraphicsRectItem>
-#include"Game.h"
 #include <QGraphicsSceneMouseEvent>
 #include <QDebug>
 #include <QGraphicsScene>
 #include "levelwindow.h"
-Tower::Tower( QGraphicsScene * scene):Structure() {
-    this->parent = scene; // this is where the problem is
+Tower::Tower(QGraphicsScene* Scene, Game* game):Structure() {
+    parent = game->scene;
+    parentGame = game;
     setPixmap(QPixmap(":/img/Clan_Castle.png"));
     setAcceptHoverEvents(true);
     type=3;
@@ -29,15 +29,15 @@ void Tower::mousePressEvent(QGraphicsSceneMouseEvent *event) {
 }
 
 void Tower::fire(const QPointF &attackDest) {
-    if (parent) {
+    if (!parent || !parentGame) {
         qDebug() << "Error: game or game->scene is null";
         return;
     }
 
-    TowerBullet *bullet = new TowerBullet();
-    bullet->setPos(x + 40, y + 48);
+    TowerBullet *bullet = new TowerBullet(this);
+    bullet->setPos(x() + 20, y() + 30);
 
-    QLineF ln(QPointF(x + 40, y + 48), mapToScene(attackDest));
+    QLineF ln(QPointF(x() + 20, y() + 30), mapToScene(attackDest));
     double angle = -ln.angle();
     bullet->setRotation(angle);
     parent->addItem(bullet);

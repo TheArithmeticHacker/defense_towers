@@ -29,7 +29,7 @@ Game::Game(QWidget *parent) : QGraphicsView(parent) {
     scene->addItem(time);
     time->startTimer();
 
-    Tower *t = new Tower(scene);
+    Tower *t = new Tower(scene, this);
     t->setPos(122,200);
 
     scene->addItem(t);
