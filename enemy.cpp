@@ -11,6 +11,10 @@
 #include <QPointF>
 #include <QLineF>
 #include <QTransform>
+#include<QList>
+#include "TowerBullet.h"
+
+int Enemy::count = 0;
 Enemy::Enemy(QGraphicsScene* parent, int x, int y)
 {
     parentScene = parent;
@@ -116,7 +120,7 @@ void Enemy::movePath()
 
 
     //Basic Movement for testing
-    int stepsize = 10;
+    int stepsize = 6;
     QLineF ln(pos().x(), pos().y(), 2*61+1, 2*57 + 51);
     double theta = -ln.angle();
 
@@ -159,7 +163,7 @@ void Enemy::movePath()
                 QTimer::singleShot(1000, this, SLOT(cooldownTime()));
             }
             startAttackingAnimation();
-        } else if(typeid(*item) == typeid(Tower)){
+        } else if (typeid(*item) == typeid(Tower)) {
             Tower* tower = dynamic_cast<Tower*>(item);
             if (isAttackOver){
                 attackTower(tower);
@@ -168,10 +172,12 @@ void Enemy::movePath()
             }
             startAttackingAnimation();
         }
-    }if(collided_items.size() == 1)
-        startWalkingAnimation();
 
 }
+             if (collided_items.size() == 1) {
+        startWalkingAnimation();
+    }
+             }
 
 void Enemy::startWalkingAnimation()
 {

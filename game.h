@@ -9,6 +9,7 @@
 #include "closebutton.h"
 #include "locations.h"
 #include "map.h"
+#include"enemy.h"
 
 
 class Game : public QGraphicsView
@@ -20,6 +21,7 @@ public:
     ~Game();
 
     QGraphicsScene * scene;
+
 
 
 

@@ -21,11 +21,11 @@ int Structure::getType()
 
 int Structure::getX()
 {
-    return x;
+    return xx;
 }
 int Structure::getY()
 {
-    return y;
+    return yy;
 }
 
 void Structure::changeHealth(int x)
@@ -36,15 +36,15 @@ void Structure::changeHealth(int x)
 
 void Structure::setPosition(int xPos, int yPos)
 {
-    x = xPos;
-    y = yPos;
+    xx = xPos;
+    yy = yPos;
     //Sets the position of the structure into an appropriate position according to 13x13 grid
-    if(x > 12 || x < 0)
+    if(xx > 12 || xx < 0)
         return;
-    if(y > 12 || y < 0)
+    if(yy > 12 || yy < 0)
         return;
     //The offsets is due to the upper bar containing health, close button, timer, and score.
-    setPos(x*61+1, y*57 + 51);
+    setPos(xx*61+1, yy*57 + 51);
 
 }
 

@@ -34,7 +34,7 @@ public:
 
 protected:
     //position
-    int x, y;
+    int xx, yy;
 
     //Type
     int type;

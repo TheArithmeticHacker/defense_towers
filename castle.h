@@ -3,7 +3,7 @@
 #include "structure.h"
 #include "healthbar.h"
 #include <QGraphicsSceneMouseEvent>
-#include "game.h"
+class Game;
 
 class Castle: public Structure
 {

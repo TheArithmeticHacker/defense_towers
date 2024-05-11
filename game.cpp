@@ -42,8 +42,15 @@ Game::Game(QWidget *parent) : QGraphicsView(parent) {
     locations->readData();
 
     build();
-    Enemy *enemy1 = new Enemy(scene, 700, 700);
-    scene->addItem(enemy1);
+
+
+        Enemy *enemy = new Enemy(scene, 700, 700);
+        scene->addItem(enemy);
+
+    Tower *tower = new Tower(scene, this);
+    tower->setPos(420,430);
+    scene->addItem(tower);
+
 }
 
 Game::~Game()

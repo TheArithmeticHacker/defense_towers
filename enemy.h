@@ -9,7 +9,7 @@
 #include <QTimer>
 #include <Wall.h>
 #include <healthbarliving.h>
-#include "Tower.h"
+class Tower;
 class Enemy : public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
@@ -41,6 +41,7 @@ private:
 public:
     Enemy(QGraphicsScene*, int, int);
     ~Enemy();
+    static int count;
 
     //setters
     void setDamage(double d);
@@ -76,6 +77,9 @@ public slots:
     void advanceAttackFrame();
     void advanceDeathFrame();
     void cooldownTime();
+signals:
+// Signal to notify when count changes
+void countChanged(int newCount);
 };
 
 #endif // ENEMY_H

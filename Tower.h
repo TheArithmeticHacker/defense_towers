@@ -10,6 +10,7 @@
 #include "healthbar.h"
 #include "game.h"
 
+
 class Tower : public Structure{
     Q_OBJECT
 public:

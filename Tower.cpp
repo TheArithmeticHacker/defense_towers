@@ -11,6 +11,7 @@
 #include <QDebug>
 #include <QGraphicsScene>
 #include "levelwindow.h"
+#include "game.h"
 
 Tower::Tower(QGraphicsScene* Scene, Game* game):Structure() {
     parent = game->scene;
@@ -47,10 +48,9 @@ void Tower::fire(const QPointF &attackDest) {
     }
 
 
-    TowerBullet *bullet = new TowerBullet(this);
-    bullet->setPos(x + 20, y + 30);
-
-    QLineF ln(QPointF(x + 20, y + 30), mapToScene(attackDest));
+    TowerBullet *bullet = new TowerBullet(parent,parentGame);
+    bullet->setPos(x() + 20, y() + 30);
+    QLineF ln(QPointF(x() + 20, y() + 30), mapToScene(attackDest));
     double angle = -ln.angle();
     bullet->setRotation(angle);
     parent->addItem(bullet);
@@ -58,7 +58,7 @@ void Tower::fire(const QPointF &attackDest) {
 
 void Tower::changeHealth(int healthChange){
     if(healthBar == nullptr){
-        healthBar = new HealthBar(this, 50, 10,  x*61+10, y*57 + 55,  1);
+        healthBar = new HealthBar(this, 50, 10,  x()*61+10, y()*57 + 55,  1);
     }
 
     if(health + healthChange >= maxHealth){
