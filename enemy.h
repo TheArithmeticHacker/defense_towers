@@ -36,6 +36,7 @@ private:
     int animationInterval = 100;
     bool isAttackOver;
     bool toRight;
+    bool isDead = false;
 
 
 public:
@@ -76,6 +77,7 @@ public slots:
     void advanceAttackFrame();
     void advanceDeathFrame();
     void cooldownTime();
+    void die();
 };
 
 #endif // ENEMY_H

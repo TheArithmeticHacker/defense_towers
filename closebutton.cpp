@@ -1,5 +1,4 @@
 #include "closebutton.h"
-#include "levelwindow.h"
 
 
 CloseButton::CloseButton(QWidget* parent): QObject(), QGraphicsPixmapItem()
@@ -11,6 +10,5 @@ CloseButton::CloseButton(QWidget* parent): QObject(), QGraphicsPixmapItem()
 
 
 void CloseButton::mousePressEvent(QGraphicsSceneMouseEvent * e){
-    emit dynamic_cast<LevelWindow*>(original)->back();
-    delete original;
+
 }

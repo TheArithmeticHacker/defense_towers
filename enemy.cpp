@@ -114,10 +114,13 @@ void Enemy::attackTower(Tower * t)
 void Enemy::movePath()
 {
 
+    if(isDead){
+        return;
+    }
 
     //Basic Movement for testing
     int stepsize = 10;
-    QLineF ln(pos().x(), pos().y(), 2*61+1, 2*57 + 51);
+    QLineF ln(pos().x(), pos().y(), 7*61+1, 7*57 + 51);
     double theta = -ln.angle();
 
     double dy = stepsize * qSin(qDegreesToRadians(theta));
@@ -164,7 +167,7 @@ void Enemy::movePath()
             if (isAttackOver){
                 attackTower(tower);
                 isAttackOver = false;
-                QTimer::singleShot(1000, this, SLOT(cooldownTime()));
+                QTimer::singleShot(1200, this, SLOT(cooldownTime()));
             }
             startAttackingAnimation();
         }
@@ -217,6 +220,12 @@ void Enemy::cooldownTime()
     isAttackOver = true;
 }
 
+void Enemy::die()
+{
+    parentScene->removeItem(this);
+    delete this;
+}
+
 void Enemy::updatePixmap()
 {
     //This transformation reflects the enemy horizontally
@@ -245,18 +254,19 @@ void Enemy::updatePixmap()
 
 void Enemy::updateHealth(int healthChange)
 {
-    if(healthBar == nullptr){
-        healthBar = new HealthBarLiving(this, 50, 10, pos().x() * 61 + 5, pos().y() * 57 + 55, 1);
+    //if(healthBar == nullptr){
+        //healthBar = new HealthBarLiving(this, 50, 10, pos().x() * 61 + 5, pos().y() * 57 + 55, 1);
 
-    }
+    //}
 
     if (getHealth() + healthChange <= 0) {
         //Destruc object and emit game over
-        parentScene->removeItem(healthBar->blackBar);
-        parentScene->removeItem(this);
+        isDead = true;
+        startDeathAnimation();
+        QTimer::singleShot(18*animationInterval, this, SLOT(die()));
     } else {
         setHealth(getHealth() + healthChange);
-        healthBar->updateBar();
+        //healthBar->updateBar();
     }
 }
 

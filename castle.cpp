@@ -1,6 +1,6 @@
 #include "castle.h"
-#include <QDebug>
 #include "levelwindow.h"
+#include <QDebug>
 
 
 Castle::Castle(QGraphicsScene* Scene, Game* game): Structure() {

@@ -255,7 +255,68 @@ debug/qrc_res.cpp: ../../res.qrc \
 		../../Enemy/die_15.png \
 		../../Enemy/attack_6.png \
 		../../Enemy/die_1.png \
-		../../Enemy/run_4.png
+		../../Enemy/run_4.png \
+		../../Worker/8_enemies_1_attack_010.png \
+		../../Worker/8_enemies_1_die_008.png \
+		../../Worker/8_enemies_1_walk_002.png \
+		../../Worker/8_enemies_1_walk_013.png \
+		../../Worker/8_enemies_1_die_010.png \
+		../../Worker/8_enemies_1_die_007.png \
+		../../Worker/8_enemies_1_walk_000.png \
+		../../Worker/baseSprite.png \
+		../../Worker/8_enemies_1_die_012.png \
+		../../Worker/8_enemies_1_attack_017.png \
+		../../Worker/8_enemies_1_attack_009.png \
+		../../Worker/8_enemies_1_die_001.png \
+		../../Worker/8_enemies_1_attack_014.png \
+		../../Worker/8_enemies_1_attack_001.png \
+		../../Worker/8_enemies_1_walk_015.png \
+		../../Worker/8_enemies_1_die_003.png \
+		../../Worker/8_enemies_1_attack_005.png \
+		../../Worker/8_enemies_1_attack_012.png \
+		../../Worker/8_enemies_1_die_017.png \
+		../../Worker/8_enemies_1_walk_006.png \
+		../../Worker/8_enemies_1_walk_004.png \
+		../../Worker/8_enemies_1_walk_012.png \
+		../../Worker/8_enemies_1_walk_014.png \
+		../../Worker/8_enemies_1_attack_000.png \
+		../../Worker/8_enemies_1_walk_001.png \
+		../../Worker/8_enemies_1_walk_018.png \
+		../../Worker/8_enemies_1_attack_016.png \
+		../../Worker/8_enemies_1_attack_006.png \
+		../../Worker/8_enemies_1_walk_010.png \
+		../../Worker/8_enemies_1_die_002.png \
+		../../Worker/8_enemies_1_walk_007.png \
+		../../Worker/8_enemies_1_walk_016.png \
+		../../Worker/8_enemies_1_die_016.png \
+		../../Worker/8_enemies_1_die_006.png \
+		../../Worker/8_enemies_1_die_004.png \
+		../../Worker/8_enemies_1_attack_018.png \
+		../../Worker/8_enemies_1_attack_002.png \
+		../../Worker/8_enemies_1_die_018.png \
+		../../Worker/8_enemies_1_walk_008.png \
+		../../Worker/8_enemies_1_die_011.png \
+		../../Worker/8_enemies_1_attack_003.png \
+		../../Worker/8_enemies_1_walk_019.png \
+		../../Worker/8_enemies_1_die_013.png \
+		../../Worker/8_enemies_1_die_000.png \
+		../../Worker/8_enemies_1_walk_011.png \
+		../../Worker/8_enemies_1_attack_007.png \
+		../../Worker/8_enemies_1_walk_003.png \
+		../../Worker/8_enemies_1_die_014.png \
+		../../Worker/8_enemies_1_die_009.png \
+		../../Worker/8_enemies_1_die_015.png \
+		../../Worker/8_enemies_1_attack_011.png \
+		../../Worker/8_enemies_1_attack_004.png \
+		../../Worker/8_enemies_1_attack_015.png \
+		../../Worker/8_enemies_1_attack_013.png \
+		../../Worker/8_enemies_1_walk_005.png \
+		../../Worker/8_enemies_1_walk_017.png \
+		../../Worker/8_enemies_1_attack_008.png \
+		../../Worker/8_enemies_1_die_005.png \
+		../../Worker/8_enemies_1_walk_009.png \
+		../../Worker/8_enemies_1_attack_019.png \
+		../../Worker/8_enemies_1_die_019.png
 	C:\Qt\6.7.0\mingw_64\bin\rcc.exe -name res --no-zstd ..\..\res.qrc -o debug\qrc_res.cpp
 
 compiler_moc_predefs_make_all: debug/moc_predefs.h
@@ -485,15 +546,6 @@ debug/moc_Tower.cpp: ../../Tower.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfile.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfiledevice.h \
 		../../map.h \
-		../../enemyspawner.h \
-		../../enemy.h \
-		../../castle.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QTimer \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qbasictimer.h \
-		../../Wall.h \
-		../../healthbarliving.h \
-		../../Tower.h \
 		debug/moc_predefs.h \
 		C:/Qt/6.7.0/mingw_64/bin/moc.exe
 	C:\Qt\6.7.0\mingw_64\bin\moc.exe $(DEFINES) --include F:/TowerDefense/DefenseOfTowers/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/debug/moc_predefs.h -IC:/Qt/6.7.0/mingw_64/mkspecs/win32-g++ -IF:/TowerDefense/DefenseOfTowers -IC:/Qt/6.7.0/mingw_64/include -IC:/Qt/6.7.0/mingw_64/include/QtWidgets -IC:/Qt/6.7.0/mingw_64/include/QtGui -IC:/Qt/6.7.0/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\..\Tower.h -o debug\moc_Tower.cpp
@@ -868,8 +920,6 @@ debug/moc_enemy.cpp: ../../enemy.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfile.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfiledevice.h \
 		../../map.h \
-		../../enemyspawner.h \
-		../../enemy.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/QTimer \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qbasictimer.h \
@@ -1287,19 +1337,6 @@ debug/moc_levelwindow.cpp: ../../levelwindow.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfile.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfiledevice.h \
 		../../map.h \
-		../../enemyspawner.h \
-		../../enemy.h \
-		../../castle.h \
-		../../healthbar.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsRectItem \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QTimer \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qbasictimer.h \
-		../../Wall.h \
-		../../healthbarliving.h \
-		../../Tower.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsPolygonItem \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QPointF \
 		debug/moc_predefs.h \
 		C:/Qt/6.7.0/mingw_64/bin/moc.exe
 	C:\Qt\6.7.0\mingw_64\bin\moc.exe $(DEFINES) --include F:/TowerDefense/DefenseOfTowers/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/debug/moc_predefs.h -IC:/Qt/6.7.0/mingw_64/mkspecs/win32-g++ -IF:/TowerDefense/DefenseOfTowers -IC:/Qt/6.7.0/mingw_64/include -IC:/Qt/6.7.0/mingw_64/include/QtWidgets -IC:/Qt/6.7.0/mingw_64/include/QtGui -IC:/Qt/6.7.0/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\..\levelwindow.h -o debug\moc_levelwindow.cpp
@@ -1906,16 +1943,6 @@ debug/moc_timerwidget.cpp: ../../timerwidget.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfile.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfiledevice.h \
 		../../map.h \
-		../../enemyspawner.h \
-		../../enemy.h \
-		../../castle.h \
-		../../healthbar.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsRectItem \
-		../../Wall.h \
-		../../healthbarliving.h \
-		../../Tower.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsPolygonItem \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QPointF \
 		debug/moc_predefs.h \
 		C:/Qt/6.7.0/mingw_64/bin/moc.exe
 	C:\Qt\6.7.0\mingw_64\bin\moc.exe $(DEFINES) --include F:/TowerDefense/DefenseOfTowers/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/debug/moc_predefs.h -IC:/Qt/6.7.0/mingw_64/mkspecs/win32-g++ -IF:/TowerDefense/DefenseOfTowers -IC:/Qt/6.7.0/mingw_64/include -IC:/Qt/6.7.0/mingw_64/include/QtWidgets -IC:/Qt/6.7.0/mingw_64/include/QtGui -IC:/Qt/6.7.0/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\..\timerwidget.h -o debug\moc_timerwidget.cpp
@@ -2528,18 +2555,13 @@ debug/Tower.o: ../../Tower.cpp ../../Tower.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfile.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfiledevice.h \
 		../../map.h \
-		../../enemyspawner.h \
-		../../enemy.h \
-		../../castle.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QTimer \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qbasictimer.h \
-		../../Wall.h \
-		../../healthbarliving.h \
 		../../TowerBullet.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/QVector \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qvector.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/QPolygonF \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/QTimer \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qbasictimer.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/QLineF \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/QDebug \
 		../../levelwindow.h
@@ -3071,18 +3093,7 @@ debug/castle.o: ../../castle.cpp ../../castle.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfile.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfiledevice.h \
 		../../map.h \
-		../../enemyspawner.h \
-		../../enemy.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QTimer \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qbasictimer.h \
-		../../Wall.h \
-		../../healthbarliving.h \
-		../../Tower.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsPolygonItem \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QPointF \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QDebug \
-		../../levelwindow.h
+		C:/Qt/6.7.0/mingw_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\castle.o ..\..\castle.cpp
 
 debug/cell.o: ../../cell.cpp ../../cell.h
@@ -3281,40 +3292,7 @@ debug/closebutton.o: ../../closebutton.cpp ../../closebutton.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qcursor.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qbitmap.h \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsSceneMouseEvent \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qgraphicssceneevent.h \
-		../../levelwindow.h \
-		../../game.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsView \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsview.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qpainter.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qtextoption.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qpen.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qscrollarea.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsscene.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsScene \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsItem \
-		../../structure.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QPair \
-		../../locations.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QFile \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qfile.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qfiledevice.h \
-		../../map.h \
-		../../enemyspawner.h \
-		../../enemy.h \
-		../../castle.h \
-		../../healthbar.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsRectItem \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QTimer \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qbasictimer.h \
-		../../Wall.h \
-		../../healthbarliving.h \
-		../../Tower.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsPolygonItem \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QPointF
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qgraphicssceneevent.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\closebutton.o ..\..\closebutton.cpp
 
 debug/enemy.o: ../../enemy.cpp ../../enemy.h \
@@ -3534,7 +3512,6 @@ debug/enemy.o: ../../enemy.cpp ../../enemy.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfile.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfiledevice.h \
 		../../map.h \
-		../../enemyspawner.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/QTimer \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qbasictimer.h \
@@ -3776,12 +3753,15 @@ debug/enemyspawner.o: ../../enemyspawner.cpp ../../enemyspawner.h \
 		../../healthbarliving.h \
 		../../Tower.h \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsPolygonItem \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QPointF
+		C:/Qt/6.7.0/mingw_64/include/QtCore/QPointF \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/QVector \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qvector.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\enemyspawner.o ..\..\enemyspawner.cpp
 
-debug/game.o: ../../game.cpp ../../game.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsView \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsview.h \
+debug/game.o: ../../game.cpp ../../Wall.h \
+		../../structure.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsitem.h \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qtguiglobal.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qglobal.h \
@@ -3832,11 +3812,17 @@ debug/game.o: ../../game.cpp ../../game.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qtguiexports.h \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qmetatype.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qbytearray.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qrefcount.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qobject.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qobjectdefs.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qnamespace.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qtmetamacros.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qobjectdefs_impl.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qfunctionaltools_impl.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qstring.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qchar.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qstringview.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qbytearray.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qrefcount.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qarraydata.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qpair.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qarraydatapointer.h \
@@ -3849,16 +3835,6 @@ debug/game.o: ../../game.cpp ../../game.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qbytearrayview.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qstringfwd.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/q20type_traits.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qcompare.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qcomparehelpers.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qdatastream.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qscopedpointer.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qiodevicebase.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qfloat16.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qhashfunctions.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qstring.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qchar.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qstringview.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qstringliteral.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qstringalgorithms.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qlatin1stringview.h \
@@ -3868,70 +3844,87 @@ debug/game.o: ../../game.cpp ../../game.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qstringbuilder.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qstringconverter.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qstringconverter_base.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qmath.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qlist.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qhashfunctions.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qiterator.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qbytearraylist.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qalgorithms.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qstringmatcher.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qcoreevent.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qscopedpointer.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qmetatype.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qcompare.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qcomparehelpers.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qdatastream.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qiodevicebase.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qfloat16.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qmath.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qiterable.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qmetacontainer.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qcontainerinfo.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qtaggedpointer.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qobjectdefs.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qobjectdefs_impl.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qfunctionaltools_impl.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qscopeguard.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qpainter.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qrect.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qmargins.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/q23utility.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qsize.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qpoint.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qpixmap.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qpaintdevice.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs_win.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qcolor.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qrgb.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qstringlist.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qlist.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qiterator.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qbytearraylist.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qstringmatcher.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qrgba64.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qshareddata.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qimage.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qpixelformat.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qtransform.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qpolygon.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qregion.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qline.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qtextoption.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qpen.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qbrush.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qfontinfo.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qfont.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qendian.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qfontmetrics.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qscrollarea.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qwidget.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qobject.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qcoreevent.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qobject_impl.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qbindingstorage.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qaction.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qkeysequence.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qicon.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qvariant.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qdebug.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qtextstream.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qcontiguouscache.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qsharedpointer.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qshareddata.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qsharedpointer_impl.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qmap.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qshareddata_impl.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qset.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qhash.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qvarlengtharray.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/q23utility.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qrect.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qmargins.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qsize.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qpoint.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qpainterpath.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qtransform.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qpolygon.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qregion.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs_win.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qline.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qpixmap.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qpaintdevice.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qcolor.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qrgb.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qrgba64.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qimage.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qpixelformat.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsScene \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsscene.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qbrush.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qfont.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qendian.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qpen.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/QObject \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/QPair \
+		../../healthbar.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsRectItem \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsSceneMouseEvent \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qgraphicssceneevent.h \
+		../../castle.h \
+		../../game.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsView \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsview.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qpainter.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qtextoption.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qfontinfo.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qfontmetrics.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qscrollarea.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qwidget.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qaction.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qkeysequence.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qicon.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qpalette.h \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qsizepolicy.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qcursor.h \
@@ -3946,7 +3939,6 @@ debug/game.o: ../../game.cpp ../../game.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qinputdevice.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qscreen.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/QList \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QObject \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/QRect \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/QSize \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/QSizeF \
@@ -3973,40 +3965,26 @@ debug/game.o: ../../game.cpp ../../game.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qinputmethod.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsscene.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsScene \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/QMouseEvent \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsItem \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsitem.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qpainterpath.h \
-		../../structure.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QPair \
 		../../closebutton.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/QPixmap \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QWidget \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsSceneMouseEvent \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qgraphicssceneevent.h \
 		../../locations.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/QFile \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfile.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfiledevice.h \
 		../../map.h \
-		../../enemyspawner.h \
-		../../enemy.h \
-		../../castle.h \
-		../../healthbar.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsRectItem \
+		../../timerwidget.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsTextItem \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/QTimer \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qbasictimer.h \
-		../../Wall.h \
-		../../healthbarliving.h \
 		../../Tower.h \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsPolygonItem \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/QPointF \
-		../../timerwidget.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsTextItem
+		../../enemy.h \
+		../../healthbarliving.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\game.o ..\..\game.cpp
 
 debug/gameover.o: ../../gameover.cpp ../../gameover.h \
@@ -4704,14 +4682,14 @@ debug/healthbarliving.o: ../../healthbarliving.cpp ../../healthbarliving.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfile.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfiledevice.h \
 		../../map.h \
-		../../enemyspawner.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/QTimer \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qbasictimer.h \
 		../../Wall.h \
 		../../Tower.h \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsPolygonItem \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QPointF
+		C:/Qt/6.7.0/mingw_64/include/QtCore/QPointF \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\healthbarliving.o ..\..\healthbarliving.cpp
 
 debug/levelwindow.o: ../../levelwindow.cpp ../../levelwindow.h \
@@ -4928,19 +4906,6 @@ debug/levelwindow.o: ../../levelwindow.cpp ../../levelwindow.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfile.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfiledevice.h \
 		../../map.h \
-		../../enemyspawner.h \
-		../../enemy.h \
-		../../castle.h \
-		../../healthbar.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsRectItem \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QTimer \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qbasictimer.h \
-		../../Wall.h \
-		../../healthbarliving.h \
-		../../Tower.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsPolygonItem \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QPointF \
 		ui_levelwindow.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/QVariant \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QApplication \
@@ -5493,19 +5458,6 @@ debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfile.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfiledevice.h \
 		../../map.h \
-		../../enemyspawner.h \
-		../../enemy.h \
-		../../castle.h \
-		../../healthbar.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsRectItem \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QTimer \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qbasictimer.h \
-		../../Wall.h \
-		../../healthbarliving.h \
-		../../Tower.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsPolygonItem \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QPointF \
 		../../settings.h \
 		../../gamesettings.h \
 		../../winscreen.h \
@@ -6024,9 +5976,9 @@ debug/structure.o: ../../structure.cpp ../../structure.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/QPair
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\structure.o ..\..\structure.cpp
 
-debug/timerwidget.o: ../../timerwidget.cpp ../../levelwindow.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QWidget \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qwidget.h \
+debug/timerwidget.o: ../../timerwidget.cpp ../../timerwidget.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsTextItem \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsitem.h \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qtguiglobal.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qglobal.h \
@@ -6077,14 +6029,12 @@ debug/timerwidget.o: ../../timerwidget.cpp ../../levelwindow.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qtguiexports.h \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qobject.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qobjectdefs.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qnamespace.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qtmetamacros.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qobjectdefs_impl.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfunctionaltools_impl.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs_win.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qobject.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qstring.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qchar.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qstringview.h \
@@ -6134,43 +6084,59 @@ debug/timerwidget.o: ../../timerwidget.cpp ../../levelwindow.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qscopeguard.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qobject_impl.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qbindingstorage.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qmargins.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/q23utility.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qaction.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qkeysequence.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qicon.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qsize.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qpixmap.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qpaintdevice.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qrect.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qpoint.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qcolor.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qrgb.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qrgba64.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qshareddata.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qimage.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qpixelformat.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qtransform.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qpolygon.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qregion.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qline.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qvariant.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qdebug.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qtextstream.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qcontiguouscache.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qsharedpointer.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qshareddata.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qsharedpointer_impl.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qmap.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qshareddata_impl.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qset.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qhash.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qvarlengtharray.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qpalette.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/q23utility.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qrect.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qmargins.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qsize.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qpoint.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qpainterpath.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qtransform.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qpolygon.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qregion.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs_win.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qline.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qpixmap.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qpaintdevice.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qcolor.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qrgb.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qrgba64.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qimage.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qpixelformat.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/QTimer \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
+		C:/Qt/6.7.0/mingw_64/include/QtCore/qbasictimer.h \
+		../../game.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsView \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsview.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qpainter.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qtextoption.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qpen.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qbrush.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qfontinfo.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qfont.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qendian.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qfontmetrics.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qfontinfo.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qscrollarea.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qwidget.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qaction.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qkeysequence.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qicon.h \
+		C:/Qt/6.7.0/mingw_64/include/QtGui/qpalette.h \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qsizepolicy.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qcursor.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qbitmap.h \
@@ -6211,26 +6177,16 @@ debug/timerwidget.o: ../../timerwidget.cpp ../../levelwindow.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qinputmethod.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qlocale.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
-		../../game.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsView \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsview.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qpainter.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qtextoption.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qpen.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qscrollarea.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsscene.h \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsScene \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/QMouseEvent \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsItem \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qgraphicsitem.h \
-		C:/Qt/6.7.0/mingw_64/include/QtGui/qpainterpath.h \
 		../../structure.h \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/QPair \
 		../../closebutton.h \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/QPixmap \
+		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QWidget \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsSceneMouseEvent \
 		C:/Qt/6.7.0/mingw_64/include/QtWidgets/qgraphicssceneevent.h \
 		../../locations.h \
@@ -6238,21 +6194,6 @@ debug/timerwidget.o: ../../timerwidget.cpp ../../levelwindow.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfile.h \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/qfiledevice.h \
 		../../map.h \
-		../../enemyspawner.h \
-		../../enemy.h \
-		../../castle.h \
-		../../healthbar.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsRectItem \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QTimer \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/qbasictimer.h \
-		../../Wall.h \
-		../../healthbarliving.h \
-		../../Tower.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsPolygonItem \
-		C:/Qt/6.7.0/mingw_64/include/QtCore/QPointF \
-		../../timerwidget.h \
-		C:/Qt/6.7.0/mingw_64/include/QtWidgets/QGraphicsTextItem \
 		C:/Qt/6.7.0/mingw_64/include/QtGui/QFont \
 		C:/Qt/6.7.0/mingw_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\timerwidget.o ..\..\timerwidget.cpp

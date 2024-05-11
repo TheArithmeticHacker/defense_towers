@@ -1,4 +1,3 @@
-#include "levelwindow.h"
 #include "timerwidget.h"
 #include <QFont>
 #include <QDebug>
@@ -32,7 +31,7 @@ void TimerWidget::updateTime() {
     } else {
         setPlainText("Time's up!");
         timer->stop();
-        emit dynamic_cast<LevelWindow*>(parentGame->parentWidget)->winScreen();
+
         parentGame->update();
         delete parentGame->parentWidget;
     }

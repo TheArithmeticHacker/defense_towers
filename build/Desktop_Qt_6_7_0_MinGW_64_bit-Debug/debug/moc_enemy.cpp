@@ -43,7 +43,8 @@ constexpr auto qt_meta_stringdata_CLASSEnemyENDCLASS = QtMocHelpers::stringData(
     "advanceWalkFrame",
     "advanceAttackFrame",
     "advanceDeathFrame",
-    "cooldownTime"
+    "cooldownTime",
+    "die"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -56,7 +57,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSEnemyENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       6,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -64,15 +65,17 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSEnemyENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   50,    2, 0x0a,    1 /* Public */,
-       4,    0,   53,    2, 0x0a,    3 /* Public */,
-       5,    0,   54,    2, 0x0a,    4 /* Public */,
-       6,    0,   55,    2, 0x0a,    5 /* Public */,
-       7,    0,   56,    2, 0x0a,    6 /* Public */,
-       8,    0,   57,    2, 0x0a,    7 /* Public */,
+       1,    1,   56,    2, 0x0a,    1 /* Public */,
+       4,    0,   59,    2, 0x0a,    3 /* Public */,
+       5,    0,   60,    2, 0x0a,    4 /* Public */,
+       6,    0,   61,    2, 0x0a,    5 /* Public */,
+       7,    0,   62,    2, 0x0a,    6 /* Public */,
+       8,    0,   63,    2, 0x0a,    7 /* Public */,
+       9,    0,   64,    2, 0x0a,    8 /* Public */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3,    2,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -103,6 +106,8 @@ Q_CONSTINIT const QMetaObject Enemy::staticMetaObject = { {
         // method 'advanceDeathFrame'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'cooldownTime'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'die'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -120,6 +125,7 @@ void Enemy::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         case 3: _t->advanceAttackFrame(); break;
         case 4: _t->advanceDeathFrame(); break;
         case 5: _t->cooldownTime(); break;
+        case 6: _t->die(); break;
         default: ;
         }
     }
@@ -146,13 +152,13 @@ int Enemy::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 7)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
+        _id -= 7;
     }
     return _id;
 }
