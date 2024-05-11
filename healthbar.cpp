@@ -35,5 +35,5 @@ void HealthBar::updateBar(){
                     yPosition + borderStroke,
                     parent->getHealth() / parent->getMaxHealth() * (width - 2 * borderStroke),
                     height - 2 * borderStroke);
-
 }
+

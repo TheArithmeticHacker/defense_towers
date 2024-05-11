@@ -10,15 +10,20 @@
 #include <worker.h>
 #include <QPointF>
 #include <QLineF>
-Enemy::Enemy(int x, int y)
+#include <QTransform>
+Enemy::Enemy(QGraphicsScene* parent, int x, int y)
 {
+    parentScene = parent;
     setPixmap(QPixmap(":/img/Enemy/baseSprite.png")
                   .scaled(50, 50)); //needs some refining until graphically appealing
     setPos(x, y);
+    healthBar = nullptr;
     //int l = game->getLevel();
     //maxHealth = currHealth = levelHealth[l];
     //currSpeed = levelSpeed[l];
     //currDamage = levelDamage[l];
+    maxHealth = 10;
+    currHealth = maxHealth;
     currDamage = 3;
     for (int i = 1; i <= 11; ++i) {
         QString filePath = ":/img/Enemy/run_" + QString::number(i) + ".png";
@@ -88,6 +93,11 @@ double Enemy::getHealth()
     return currHealth;
 }
 
+double Enemy::getMaxHealth()
+{
+    return maxHealth;
+}
+
 void Enemy::attackCastle(Castle* castle) {
     castle->changeHealth(-currDamage);
 }
@@ -104,13 +114,21 @@ void Enemy::attackTower(Tower * t)
 void Enemy::movePath()
 {
 
+
     //Basic Movement for testing
     int stepsize = 10;
-    QLineF ln(pos().x(), pos().y(), 7*61+1, 7*57 + 51);
+    QLineF ln(pos().x(), pos().y(), 2*61+1, 2*57 + 51);
     double theta = -ln.angle();
 
     double dy = stepsize * qSin(qDegreesToRadians(theta));
     double dx = stepsize * qCos(qDegreesToRadians(theta));
+
+    //Check direction of movement, right or left
+    if(dx < 0)
+        toRight = false;
+    else
+        toRight = true;
+
     if(!(animatedAttackTimer->isActive()) && !(animatedDeathTimer->isActive())){
         startWalkingAnimation();
     }
@@ -126,7 +144,7 @@ void Enemy::movePath()
             if (isAttackOver){
                 attackWall(w);
                 isAttackOver = false;
-                cooldownTimer->start(animationInterval);
+                QTimer::singleShot(1000, this, SLOT(cooldownTime()));
             }
             startAttackingAnimation();
         } else if (typeid(*item) == typeid(Worker)) {
@@ -137,7 +155,6 @@ void Enemy::movePath()
             Castle* castle = dynamic_cast<Castle*>(item);
             if (isAttackOver){
                 attackCastle(castle);
-
                 isAttackOver = false;
                 QTimer::singleShot(1000, this, SLOT(cooldownTime()));
             }
@@ -145,14 +162,15 @@ void Enemy::movePath()
         } else if(typeid(*item) == typeid(Tower)){
             Tower* tower = dynamic_cast<Tower*>(item);
             if (isAttackOver){
-
-
+                attackTower(tower);
                 isAttackOver = false;
                 QTimer::singleShot(1000, this, SLOT(cooldownTime()));
             }
             startAttackingAnimation();
         }
-    }
+    }if(collided_items.size() == 1)
+        startWalkingAnimation();
+
 }
 
 void Enemy::startWalkingAnimation()
@@ -201,11 +219,53 @@ void Enemy::cooldownTime()
 
 void Enemy::updatePixmap()
 {
-    if (animatedWalkTimer->isActive()) {
-        setPixmap(animatedWalk[currentWalkFrame].scaled(50, 50));
-    } else if (animatedAttackTimer->isActive()) {
-        setPixmap(animatedAttack[currentAttackFrame].scaled(50, 50));
-    } else if (animatedDeathTimer->isActive()) {
-        setPixmap(animatedDeath[currentDeathFrame].scaled(50, 50));
+    //This transformation reflects the enemy horizontally
+    QTransform transform;
+    transform.scale(-1, 1);
+    if(toRight){
+        if (animatedWalkTimer->isActive()) {
+            setPixmap(animatedWalk[currentWalkFrame].scaled(50, 50));
+        } else if (animatedAttackTimer->isActive()) {
+            setPixmap(animatedAttack[currentAttackFrame].scaled(50, 50));
+        } else if (animatedDeathTimer->isActive()) {
+            setPixmap(animatedDeath[currentDeathFrame].scaled(50, 50));
+        }
+    }else{
+        if (animatedWalkTimer->isActive()) {
+            setPixmap(animatedWalk[currentWalkFrame].scaled(50, 50).transformed(transform));
+        } else if (animatedAttackTimer->isActive()) {
+            setPixmap(animatedAttack[currentAttackFrame].scaled(50, 50).transformed(transform));
+        } else if (animatedDeathTimer->isActive()) {
+            setPixmap(animatedDeath[currentDeathFrame].scaled(50, 50).transformed(transform));
+        }
+    }
+
+
+}
+
+void Enemy::updateHealth(int healthChange)
+{
+    if(healthBar == nullptr){
+        healthBar = new HealthBarLiving(this, 50, 10, pos().x() * 61 + 5, pos().y() * 57 + 55, 1);
+
+    }
+
+    if (getHealth() + healthChange <= 0) {
+        //Destruc object and emit game over
+        parentScene->removeItem(healthBar->blackBar);
+        parentScene->removeItem(this);
+    } else {
+        setHealth(getHealth() + healthChange);
+        healthBar->updateBar();
+    }
+}
+
+void Enemy::mousePressEvent(QGraphicsSceneMouseEvent *e)
+{
+    if(e->button() == Qt::LeftButton){
+        updateHealth(-2);
+
+    }else if(e->button() == Qt::RightButton){
+        updateHealth(1);
     }
 }

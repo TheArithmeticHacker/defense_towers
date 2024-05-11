@@ -8,7 +8,7 @@
 #include <QObject>
 #include <QTimer>
 #include <Wall.h>
-#include <healthbar.h>
+#include <healthbarliving.h>
 #include "Tower.h"
 class Enemy : public QObject, public QGraphicsPixmapItem
 {
@@ -29,15 +29,17 @@ private:
     QTimer *animatedDeathTimer;
     QTimer *movementTimer;
     QTimer *cooldownTimer;
-    HealthBar *healthBar;
+    HealthBarLiving *healthBar;
     int currentWalkFrame = 0;
     int currentAttackFrame = 0;
     int currentDeathFrame = 0;
     int animationInterval = 100;
     bool isAttackOver;
+    bool toRight;
+
 
 public:
-    Enemy(int, int);
+    Enemy(QGraphicsScene*, int, int);
     ~Enemy();
 
     //setters
@@ -51,6 +53,7 @@ public:
     double getDamage();
     double getSpeed();
     double getHealth();
+    double getMaxHealth();
 
     //functionalities
     void attackCastle(Castle *);
@@ -60,8 +63,13 @@ public:
     void startAttackingAnimation();
     void startDeathAnimation();
     void updatePixmap();
+    void updateHealth(int);
+
+    //Public variable to allow healthBar to be added to the game scene
+    QGraphicsScene* parentScene;
 
 public slots:
+    void mousePressEvent(QGraphicsSceneMouseEvent*);
     void movePath();
     //void moveHealthBar();
     void advanceWalkFrame();

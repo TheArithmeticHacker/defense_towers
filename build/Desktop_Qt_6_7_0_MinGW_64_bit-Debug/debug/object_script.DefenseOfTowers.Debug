@@ -5,11 +5,13 @@ debug/castle.o
 debug/cell.o
 debug/closebutton.o
 debug/enemy.o
+debug/enemyspawner.o
 debug/game.o
 debug/gameover.o
 debug/gamesettings.o
 debug/graph.o
 debug/healthbar.o
+debug/healthbarliving.o
 debug/levelwindow.o
 debug/locations.o
 debug/main.o

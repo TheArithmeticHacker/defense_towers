@@ -1,4 +1,4 @@
-#include "game.h"
+
 #include "Wall.h"
 #include "castle.h"
 #include "timerwidget.h"
@@ -42,7 +42,7 @@ Game::Game(QWidget *parent) : QGraphicsView(parent) {
     locations->readData();
 
     build();
-    Enemy *enemy1 = new Enemy(100, 100);
+    Enemy *enemy1 = new Enemy(scene, 700, 700);
     scene->addItem(enemy1);
 }
 

@@ -5,11 +5,13 @@ release/castle.o
 release/cell.o
 release/closebutton.o
 release/enemy.o
+release/enemyspawner.o
 release/game.o
 release/gameover.o
 release/gamesettings.o
 release/graph.o
 release/healthbar.o
+release/healthbarliving.o
 release/levelwindow.o
 release/locations.o
 release/main.o

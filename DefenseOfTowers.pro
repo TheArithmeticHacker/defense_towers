@@ -16,11 +16,13 @@ SOURCES += \
     cell.cpp \
     closebutton.cpp \
     enemy.cpp \
+    enemyspawner.cpp \
     game.cpp \
     gameover.cpp \
     gamesettings.cpp \
     graph.cpp \
     healthbar.cpp \
+    healthbarliving.cpp \
     levelwindow.cpp \
     locations.cpp \
     main.cpp \
@@ -40,11 +42,13 @@ HEADERS += \
     cell.h \
     closebutton.h \
     enemy.h \
+    enemyspawner.h \
     game.h \
     gameover.h \
     gamesettings.h \
     graph.h \
     healthbar.h \
+    healthbarliving.h \
     levelwindow.h \
     locations.h \
     mainwindow.h \

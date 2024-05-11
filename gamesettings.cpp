@@ -1,4 +1,4 @@
-#include "gamesettings.h"
+ #include "gamesettings.h"
 #include <QDebug>
 #include <QTextStream>
 GameSettings::GameSettings() {
@@ -21,9 +21,10 @@ GameSettings::GameSettings() {
     }
     file->close();
     delete file;
-    file = new QFile("currlevel.txt");
+    file = new QFile("currLevel.txt");
     if(!file->open(QIODevice::ReadOnly)){
         qDebug("File could not open for read");
+        currLevel = 1;
         return;
     }
 
@@ -44,7 +45,6 @@ void GameSettings::updateLevel()
         qDebug("File could not open for read");
         return;
     }
-
     QTextStream temp(file);
     temp << QString::number(currLevel);
     file->close();

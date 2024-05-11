@@ -10,6 +10,7 @@
 #include "locations.h"
 #include "map.h"
 
+
 class Game : public QGraphicsView
 {
 
