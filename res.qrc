@@ -107,5 +107,6 @@
         <file>Worker/8_enemies_1_walk_018.png</file>
         <file>Worker/8_enemies_1_walk_019.png</file>
         <file>Worker/baseSprite.png</file>
+        <file>booster.png</file>
     </qresource>
 </RCC>

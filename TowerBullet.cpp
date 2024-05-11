@@ -3,6 +3,7 @@
 #include <QTimer>
 #include <qmath.h>
 #include "enemy.h"
+#include "Boosters.h"
 int TowerBullet::count = 0;
 TowerBullet::TowerBullet(QGraphicsScene* Scene, Game* game):Structure() {
     setPixmap(QPixmap(":/img/Bomb3.png"));
@@ -22,10 +23,10 @@ void TowerBullet::move(){
     double dx = stepsize_spirte * qCos(qDegreesToRadians(theta));
     setPos(pos().x() + dx, pos().y() + dy);
 
-    QList<QGraphicsItem *> collided_items = collidingItems();
+    QList<QGraphicsItem *> collidedItems = collidingItems();
     bool collided = false;
 
-    for (auto item : collided_items) {
+    for (auto item : collidedItems) {
         if (typeid(*item) == typeid(Enemy)) {
             Enemy* enemy = dynamic_cast<Enemy*>(item);
             enemy->decreaseHealth(damage);
@@ -38,13 +39,20 @@ void TowerBullet::move(){
                 qDebug() << "Enemy destroyed! Count: " << count;
                 collided = true;
             }
+        } else if (typeid(*item) == typeid(Booster)) {
+            Booster* booster = dynamic_cast<Booster*>(item);
+            scene()->removeItem(booster);
+            delete booster;
+            qDebug() << "Booster removed";
+            collided = true; // Set collided to true to indicate a collision
         }
     }
 
     if (collided) {
         scene()->removeItem(this);
+        delete this; // Delete the bullet item
+        qDebug() << "Bullet removed";
     }
-
 
     if (count >= 20 * (damageIncreasedCount + 1)) {
         damage = damage + (damage * 0.1);

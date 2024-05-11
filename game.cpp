@@ -1,4 +1,4 @@
-
+#include"Boosters.h"
 #include "Wall.h"
 #include "castle.h"
 #include "timerwidget.h"
@@ -32,7 +32,8 @@ Game::Game(QWidget *parent) : QGraphicsView(parent) {
     scene->addItem(time);
     time->startTimer();
 
-
+    Booster * boost = new Booster (scene);
+    scene->addItem(boost);
 
 
 
