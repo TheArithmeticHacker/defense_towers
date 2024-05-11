@@ -2,7 +2,7 @@
 #include "Wall.h"
 #include "castle.h"
 #include "timerwidget.h"
-
+#include "worker.h"
 #include "Tower.h"
 #include "enemy.h"
 
@@ -51,6 +51,8 @@ Game::Game(QWidget *parent) : QGraphicsView(parent) {
     tower->setPos(420,430);
     scene->addItem(tower);
 
+    Worker* worker1 = new Worker(400, 400);
+    scene->addItem(worker1);
 }
 
 Game::~Game()

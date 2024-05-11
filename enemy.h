@@ -36,12 +36,12 @@ private:
     int animationInterval = 100;
     bool isAttackOver;
     bool toRight;
+    bool isDead = false;
 
 
 public:
     Enemy(QGraphicsScene*, int, int);
     ~Enemy();
-    static int count;
 
     //setters
     void setDamage(double d);
@@ -77,9 +77,7 @@ public slots:
     void advanceAttackFrame();
     void advanceDeathFrame();
     void cooldownTime();
-signals:
-// Signal to notify when count changes
-void countChanged(int newCount);
+    void die();
 };
 
 #endif // ENEMY_H

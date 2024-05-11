@@ -46,5 +46,66 @@
         <file>Enemy/die_15.png</file>
         <file>Enemy/die_16.png</file>
         <file>Enemy/baseSprite.png</file>
+        <file>Worker/8_enemies_1_attack_000.png</file>
+        <file>Worker/8_enemies_1_attack_001.png</file>
+        <file>Worker/8_enemies_1_attack_002.png</file>
+        <file>Worker/8_enemies_1_attack_003.png</file>
+        <file>Worker/8_enemies_1_attack_004.png</file>
+        <file>Worker/8_enemies_1_attack_005.png</file>
+        <file>Worker/8_enemies_1_attack_006.png</file>
+        <file>Worker/8_enemies_1_attack_007.png</file>
+        <file>Worker/8_enemies_1_attack_008.png</file>
+        <file>Worker/8_enemies_1_attack_009.png</file>
+        <file>Worker/8_enemies_1_attack_010.png</file>
+        <file>Worker/8_enemies_1_attack_011.png</file>
+        <file>Worker/8_enemies_1_attack_012.png</file>
+        <file>Worker/8_enemies_1_attack_013.png</file>
+        <file>Worker/8_enemies_1_attack_014.png</file>
+        <file>Worker/8_enemies_1_attack_015.png</file>
+        <file>Worker/8_enemies_1_attack_016.png</file>
+        <file>Worker/8_enemies_1_attack_017.png</file>
+        <file>Worker/8_enemies_1_attack_018.png</file>
+        <file>Worker/8_enemies_1_attack_019.png</file>
+        <file>Worker/8_enemies_1_die_000.png</file>
+        <file>Worker/8_enemies_1_die_001.png</file>
+        <file>Worker/8_enemies_1_die_002.png</file>
+        <file>Worker/8_enemies_1_die_003.png</file>
+        <file>Worker/8_enemies_1_die_004.png</file>
+        <file>Worker/8_enemies_1_die_005.png</file>
+        <file>Worker/8_enemies_1_die_006.png</file>
+        <file>Worker/8_enemies_1_die_007.png</file>
+        <file>Worker/8_enemies_1_die_008.png</file>
+        <file>Worker/8_enemies_1_die_009.png</file>
+        <file>Worker/8_enemies_1_die_010.png</file>
+        <file>Worker/8_enemies_1_die_011.png</file>
+        <file>Worker/8_enemies_1_die_012.png</file>
+        <file>Worker/8_enemies_1_die_013.png</file>
+        <file>Worker/8_enemies_1_die_014.png</file>
+        <file>Worker/8_enemies_1_die_015.png</file>
+        <file>Worker/8_enemies_1_die_016.png</file>
+        <file>Worker/8_enemies_1_die_017.png</file>
+        <file>Worker/8_enemies_1_die_018.png</file>
+        <file>Worker/8_enemies_1_die_019.png</file>
+        <file>Worker/8_enemies_1_walk_000.png</file>
+        <file>Worker/8_enemies_1_walk_001.png</file>
+        <file>Worker/8_enemies_1_walk_002.png</file>
+        <file>Worker/8_enemies_1_walk_003.png</file>
+        <file>Worker/8_enemies_1_walk_004.png</file>
+        <file>Worker/8_enemies_1_walk_005.png</file>
+        <file>Worker/8_enemies_1_walk_006.png</file>
+        <file>Worker/8_enemies_1_walk_007.png</file>
+        <file>Worker/8_enemies_1_walk_008.png</file>
+        <file>Worker/8_enemies_1_walk_009.png</file>
+        <file>Worker/8_enemies_1_walk_010.png</file>
+        <file>Worker/8_enemies_1_walk_011.png</file>
+        <file>Worker/8_enemies_1_walk_012.png</file>
+        <file>Worker/8_enemies_1_walk_013.png</file>
+        <file>Worker/8_enemies_1_walk_014.png</file>
+        <file>Worker/8_enemies_1_walk_015.png</file>
+        <file>Worker/8_enemies_1_walk_016.png</file>
+        <file>Worker/8_enemies_1_walk_017.png</file>
+        <file>Worker/8_enemies_1_walk_018.png</file>
+        <file>Worker/8_enemies_1_walk_019.png</file>
+        <file>Worker/baseSprite.png</file>
     </qresource>
 </RCC>

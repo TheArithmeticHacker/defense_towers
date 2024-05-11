@@ -70,6 +70,6 @@ void Structure::setCost(double c)
 
 bool Structure::isDamaged()
 {
-    //Used to check if the strucutre health is 0
-    return health <= 0;
+    //Used to check if the strucutre is damaged
+    return health < maxHealth;
 }
