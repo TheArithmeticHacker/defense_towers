@@ -109,4 +109,9 @@
         <file>Worker/baseSprite.png</file>
         <file>booster.png</file>
     </qresource>
+    <qresource prefix="/sounds">
+        <file>loginwindowaudio.mp3</file>
+        <file>win.mp3</file>
+        <file>lose.mp3</file>
+    </qresource>
 </RCC>

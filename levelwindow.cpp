@@ -1,7 +1,7 @@
 #include "levelwindow.h"
 #include "ui_levelwindow.h"
 #include "gameover.h"
-
+#include <QMediaPlayer>
 
 
 LevelWindow::LevelWindow(QWidget *parent)

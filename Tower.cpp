@@ -12,6 +12,8 @@
 #include <QGraphicsScene>
 #include "levelwindow.h"
 #include "game.h"
+#include <QMediaPlayer>
+#include <QAudioOutput>
 
 Tower::Tower(QGraphicsScene* Scene, Game* game):Structure() {
     parent = game->scene;
@@ -46,8 +48,6 @@ void Tower::fire(const QPointF &attackDest) {
         qDebug() << "Error: game or game->scene is null";
         return;
     }
-
-
     TowerBullet *bullet = new TowerBullet(parent,parentGame);
     bullet->setPos(x() + 20, y() + 30);
     QLineF ln(QPointF(x() + 20, y() + 30), mapToScene(attackDest));

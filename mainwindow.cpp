@@ -6,8 +6,8 @@
 #include "gamesettings.h"
 #include "winscreen.h"
 #include "gameover.h"
-
-
+#include <QMediaPlayer>
+#include <QAudioOutput>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -16,6 +16,12 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     setFixedSize(800, 800);
     ui->startGame->setText("Play Level " + QString::number(settings.currLevel));
+    QAudioOutput* loginaudio = new QAudioOutput();
+    loginaudio->setVolume(50);
+    QMediaPlayer* loginmedia = new QMediaPlayer();
+    loginmedia->setAudioOutput(loginaudio);
+    loginmedia->setSource(QUrl("qrc:/sounds/loginwindow.mp3"));
+    loginmedia->play();
 }
 
 MainWindow::~MainWindow()
