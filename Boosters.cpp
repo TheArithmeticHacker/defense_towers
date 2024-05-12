@@ -2,9 +2,10 @@
 #include "Tower.h"
 #include "worker.h"
 #include "Wall.h"
+#include "TowerBullet.h"
+Booster::Booster(QGraphicsScene *Scene,Game* game) : Structure() {
+    parentscene=Scene;
 
-Booster::Booster(QGraphicsScene* Scene) : Structure() {
-    parentscene=Scene; // Adjust according to your map size
 
     // Load image
     QPixmap image(":/img/booster.png");
@@ -18,27 +19,37 @@ Booster::Booster(QGraphicsScene* Scene) : Structure() {
 }
 
 void Booster::respawnImage() {
-        bool overlapped = true;
-        while (overlapped) {
-            // Generate random position within the scene
-            int newX = QRandomGenerator::global()->bounded(0, static_cast<int>(800 - imageItem->boundingRect().width()));
-            int newY = QRandomGenerator::global()->bounded(0, static_cast<int>(400 - imageItem->boundingRect().height()));
-            // Check for collisions with specified item types
-            overlapped = false;
-            QList<QGraphicsItem*> collidingItems;
-            for (auto type : {Tower::Type, Castle::Type, Enemy::Type, Worker::Type, Wall::Type}) {
-                collidingItems = parentscene->items(imageItem->mapToScene(imageItem->boundingRect()).translated(newX, newY), Qt::IntersectsItemShape);
-                if (!collidingItems.isEmpty()) {
-                    overlapped = true;
-                    break;  // Exit the loop if any collision is detected
+    bool overlapped = true;
+    while (overlapped) {
+        int newX = QRandomGenerator::global()->bounded(0, static_cast<int>(800 - imageItem->boundingRect().width()));
+        int newY = QRandomGenerator::global()->bounded(0, static_cast<int>(400 - imageItem->boundingRect().height()));
+
+        overlapped = false;
+        QList<QGraphicsItem*> collidingItems;
+        for (auto item : {Tower::Type, Castle::Type, Enemy::Type, Worker::Type, Wall::Type, TowerBullet::Type}) {
+            collidingItems = parentscene->items(imageItem->mapToScene(imageItem->boundingRect()).translated(newX, newY), Qt::IntersectsItemShape);
+            if (!collidingItems.isEmpty()) {
+                for (QGraphicsItem* item : collidingItems) {
+                    if (item->type() == TowerBullet::Type) {
+                        TowerBullet* towerBullet = dynamic_cast<TowerBullet*>(item);
+                        if (towerBullet && towerBullet->scene() == parentscene) {
+                            parentscene->removeItem(towerBullet);
+                            delete towerBullet;
+                            qDebug() << "TowerBullet deleted";
+                        } else {
+                            qDebug() << "TowerBullet is null or belongs to a different scene!";
+                        }
+                    } else {
+                        overlapped = true;
+                        break;
+                    }
                 }
             }
-
-            // If overlapped, try again with a new random position
-            if (overlapped)
-                continue;
-
-            // Set the position if no overlap is detected
-            imageItem->setPos(newX, newY);
         }
+
+        if (overlapped)
+            continue;
+
+        imageItem->setPos(newX, newY);
+    }
 }

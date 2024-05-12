@@ -24,34 +24,21 @@ void TowerBullet::move(){
     setPos(pos().x() + dx, pos().y() + dy);
 
     QList<QGraphicsItem *> collidedItems = collidingItems();
-    bool collided = false;
 
     for (auto item : collidedItems) {
         if (typeid(*item) == typeid(Enemy)) {
             Enemy* enemy = dynamic_cast<Enemy*>(item);
             enemy->decreaseHealth(damage);
             qDebug() << "Bullet collided with enemy";
+            scene()->removeItem(this);
 
             if (enemy->getHealth() <= 0) {
-                scene()->removeItem(enemy);
+                parent->removeItem(enemy);
                 delete enemy;
                 count++;
                 qDebug() << "Enemy destroyed! Count: " << count;
-                collided = true;
             }
-        } else if (typeid(*item) == typeid(Booster)) {
-            Booster* booster = dynamic_cast<Booster*>(item);
-            scene()->removeItem(booster);
-            delete booster;
-            qDebug() << "Booster removed";
-            collided = true; // Set collided to true to indicate a collision
         }
-    }
-
-    if (collided) {
-        scene()->removeItem(this);
-        delete this; // Delete the bullet item
-        qDebug() << "Bullet removed";
     }
 
     if (count >= 20 * (damageIncreasedCount + 1)) {

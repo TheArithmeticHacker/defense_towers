@@ -7,19 +7,21 @@
 #include <QList>
 #include <QRandomGenerator>
 #include "structure.h"
+#include"game.h"
 
 class Booster : public Structure {
     Q_OBJECT
 public:
-    explicit Booster(QGraphicsScene* Scene);
+    explicit Booster(QGraphicsScene* Scene,Game* game);
 
 private slots:
     void respawnImage();
 
 private:
-    QGraphicsScene* parentscene;
+    QGraphicsScene *parentscene;
     QGraphicsPixmapItem *imageItem;
     QTimer *respawnTimer;
+    Game*  parentgame;
 };
 
 #endif // Booster_H

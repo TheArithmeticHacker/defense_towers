@@ -32,7 +32,7 @@ Game::Game(QWidget *parent) : QGraphicsView(parent) {
     scene->addItem(time);
     time->startTimer();
 
-    Booster * boost = new Booster (scene);
+    Booster * boost = new Booster (scene, this);
     scene->addItem(boost);
 
 
