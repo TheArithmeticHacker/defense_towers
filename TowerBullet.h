@@ -12,7 +12,7 @@ public:
     Game* parentGame;
     QGraphicsScene* parentScene;
       static int count;
-    int stepsize_spirte = 10;
+    static int stepsize_spirte ;
       int damage;
     int damageIncreasedCount;
 public slots:

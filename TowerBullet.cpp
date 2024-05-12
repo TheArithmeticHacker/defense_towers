@@ -5,6 +5,7 @@
 #include "enemy.h"
 #include "Boosters.h"
 int TowerBullet::count = 0;
+int TowerBullet::stepsize_spirte = 10;
 TowerBullet::TowerBullet(QGraphicsScene* Scene, Game* game):Structure() {
     setPixmap(QPixmap(":/img/Bomb3.png"));
     QTimer * move_timer = new QTimer(this);
@@ -39,6 +40,13 @@ void TowerBullet::move(){
                 qDebug() << "Enemy destroyed! Count: " << count;
             }
         }
+
+        if (typeid(*item) == typeid(Booster)) {
+            Booster* booster = dynamic_cast<Booster*>(item);
+            scene()->removeItem(this);
+            parent->removeItem(booster);
+            stepsize_spirte = stepsize_spirte + 30;
+            qDebug() <<"sprite" << stepsize_spirte;
     }
 
     if (count >= 20 * (damageIncreasedCount + 1)) {
@@ -46,4 +54,5 @@ void TowerBullet::move(){
         damageIncreasedCount++;
         qDebug() << "Increased bullet damage to" << damage << "after" << count << "kills";
     }
+}
 }

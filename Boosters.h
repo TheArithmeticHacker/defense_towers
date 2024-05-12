@@ -13,13 +13,14 @@ class Booster : public Structure {
     Q_OBJECT
 public:
     explicit Booster(QGraphicsScene* Scene,Game* game);
+    int Getrandomx();
+    int Getrandomy();
 
 private slots:
     void respawnImage();
 
 private:
     QGraphicsScene *parentscene;
-    QGraphicsPixmapItem *imageItem;
     QTimer *respawnTimer;
     Game*  parentgame;
 };
